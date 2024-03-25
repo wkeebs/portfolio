@@ -28,16 +28,16 @@ const Nav = (props: any) => {
 
   return (
     <nav className="relative mx-8 flex justify-between pt-12 pb-6 items-center md:mx-16 lg:mx-32">
-      <p className="text-2xl text-white poppins">
+      <a className="text-2xl text-white poppins" href="\">
         {" "}
         <span className="text-green-700">{"<"}</span> W K <span className="text-green-700">{">"}</span>
-      </p>
+      </a>
 
       {matches && (
         <div className="flex gap-12 text-white">
-          <a href="/">about</a>
-          <a href="/">projects</a>
-          <a href="/">contact</a>
+          <a className="hover:underline-offset-2 hover:underline" href="/">about</a>
+          <a className="hover:underline-offset-2 hover:underline" href="/">projects</a>
+          <a className="hover:underline-offset-2 hover:underline" href="/">contact</a>
           {props.resumeBtn}
         </div>
       )}
@@ -77,13 +77,13 @@ const Nav = (props: any) => {
             initial="hidden"
             className="flex flex-col gap-24 text-lg items-center content-center"
           >
-            <motion.a variants={itemMotion} href="/">
+            <motion.a className="hover:underline-offset-2 hover:underline" variants={itemMotion} href="/">
               about
             </motion.a>
-            <motion.a variants={itemMotion} href="/">
+            <motion.a className="hover:underline-offset-2 hover:underline" variants={itemMotion} href="/">
               projects
             </motion.a>
-            <motion.a variants={itemMotion} href="/">
+            <motion.a className="hover:underline-offset-2 hover:underline" variants={itemMotion} href="/">
               contact
             </motion.a>
             <motion.div variants={itemMotion}>{props.resumeBtn}</motion.div>
