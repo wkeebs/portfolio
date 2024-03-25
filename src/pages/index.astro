@@ -1,23 +1,30 @@
 ---
-import ResumeBtn from "../components/ResumeBtn.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Will Keeble - Developer">
-  <main>
-    <h1>Hey, I'm <span class="text-gradient">Will</span></h1>
-    <ResumeBtn />
+  <main class="hero">
+    <div class="text-start pt-16 px-8">
+      <p class="text-lg">Hey, I'm</p>
+      <p class="text-9xl font-extrabold mb-3">
+        <span class="poppins text-gradient">Will Keeble</span>
+      </p>
+      <p class="text-xl">
+        I'm a <span class="text-green-600">developer</span> from <span
+          class="hover:bg-green-100 hover:text-black transition-all mx-0.5"
+          >Melbourne, Australia</span
+        > in my 3rd year of Computer Science at Monash University.
+      </p>
+    </div>
   </main>
 </Layout>
 
 <style>
   main {
-    margin: auto;
-    padding: 1rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
+    padding: 3rem;
+    width: 100%;
     color: white;
-    font-size: 20px;
+    font-size: 1.5em;
     line-height: 1.6;
   }
 
@@ -35,6 +42,4 @@ import Layout from "../layouts/Layout.astro";
     background-size: 500%;
     background-position: 0%;
   }
-
-
 </style>

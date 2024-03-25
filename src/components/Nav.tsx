@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "../util/useMediaQuery";
+import ResumeBtn from "./ResumeBtn.astro";
 
 const navMotion = {
   visible: {
@@ -21,37 +22,23 @@ const itemMotion = {
   hidden: { opacity: 0, x: -100 },
 };
 
-const Nav = () => {
+const Nav = (props: any) => {
   const [toggled, setToggled] = useState(false);
-  const matches = useMediaQuery("(min-width: 1280px)");
+  const matches = useMediaQuery("(min-width: 720px)");
 
   return (
-    <nav className="relative mx-8 mb-24 flex justify-between pt-12 pb-6 items-center md:mx-16 lg:mx-32">
-      {/* <svg
-        className="absolute bottom-0 left-1/2 -translate-x-1/2"
-        width="250"
-        height={4}
-        viewBox="0 0 250 4"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M2 2L428 2"
-          strokeWidth={2}
-          stroke="#FFF"
-          strokeLinecap="round"
-        />
-      </svg> */}
-      <h1 className="text-lg font-bold text-white">
-        <a href="/">Will Keeble</a>
-      </h1>
+    <nav className="relative mx-8 flex justify-between pt-12 pb-6 items-center md:mx-16 lg:mx-32">
+      <p className="text-2xl text-white poppins">
+        {" "}
+        <span className="text-green-700">{"<"}</span> W K <span className="text-green-700">{">"}</span>
+      </p>
 
       {matches && (
         <div className="flex gap-12 text-white">
           <a href="/">about</a>
           <a href="/">projects</a>
           <a href="/">contact</a>
-          <a href="/">resume</a>
+          {props.resumeBtn}
         </div>
       )}
 
@@ -88,7 +75,7 @@ const Nav = () => {
             variants={navMotion}
             animate="visible"
             initial="hidden"
-            className="flex flex-col gap-24 text-lg"
+            className="flex flex-col gap-24 text-lg items-center content-center"
           >
             <motion.a variants={itemMotion} href="/">
               about
@@ -99,9 +86,7 @@ const Nav = () => {
             <motion.a variants={itemMotion} href="/">
               contact
             </motion.a>
-            <motion.a variants={itemMotion} href="/">
-              resume
-            </motion.a>
+            <motion.div variants={itemMotion}>{props.resumeBtn}</motion.div>
           </motion.div>
         </motion.div>
       )}
