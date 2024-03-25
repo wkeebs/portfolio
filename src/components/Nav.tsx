@@ -27,7 +27,7 @@ const Nav = () => {
 
   return (
     <nav className="relative mx-8 mb-24 flex justify-between pt-12 pb-6 items-center md:mx-16 lg:mx-32">
-      <svg
+      {/* <svg
         className="absolute bottom-0 left-1/2 -translate-x-1/2"
         width="250"
         height={4}
@@ -41,7 +41,7 @@ const Nav = () => {
           stroke="#FFF"
           strokeLinecap="round"
         />
-      </svg>
+      </svg> */}
       <h1 className="text-lg font-bold text-white">
         <a href="/">Will Keeble</a>
       </h1>
