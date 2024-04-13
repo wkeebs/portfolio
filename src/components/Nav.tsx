@@ -44,7 +44,7 @@ const Nav = (props: any) => {
           <a className="hover:underline-offset-2 hover:underline" href="/">
             projects
           </a>
-          <a className="hover:underline-offset-2 hover:underline" href="/">
+          <a className="hover:underline-offset-2 hover:underline" href="#contact">
             contact
           </a>
           {props.resumeBtn}

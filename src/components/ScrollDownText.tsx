@@ -14,7 +14,7 @@ const ScrollDownText: React.FC<ScrollTextProps> = ({ color }) => {
 
   return (
     <>
-      <motion.p style={{ opacity, color: color }}>
+      <motion.a href="#about" style={{ opacity, color: color }}>
         <motion.p
           transition={{
             duration: 1.5,
@@ -28,7 +28,7 @@ const ScrollDownText: React.FC<ScrollTextProps> = ({ color }) => {
         >
           scroll &rarr;
         </motion.p>
-      </motion.p>
+      </motion.a>
     </>
   );
 };

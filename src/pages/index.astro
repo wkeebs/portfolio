@@ -5,13 +5,16 @@ import SocialButton from "../components/SocialButton.astro";
 import ParallaxBackground from "../components/ParallaxBackground";
 import ScrollingSkills from "../components/ScrollingSkills.astro";
 import AboutSection from "../components/AboutSection";
+import ContactSection from "../components/ContactSection.astro";
+import Copyright from "../components/Copyright";
+
 ---
 
 <Layout title="Will Keeble - Developer">
   <main>
     <ScrollingSkills />
     <div class="text-center pt-24 p-6 md:px-16 lg:px-32 h-[24rem]">
-      <p class="text-8xl sm:text-[10rem] font-extrabold mb-3">
+      <p class="text-8xl sm:text-[10rem] font-bold mb-3">
         <span class="poppins tracking-wider shadowed-text">WILL KEEBLE</span>
       </p>
       <p class="mt-8 text-3xl text-gradient">
@@ -32,14 +35,22 @@ import AboutSection from "../components/AboutSection";
         />
       </div>
     </div>
-    <a href="#about" class="w-full flex flex-row justify-end">
+    <div class="w-full flex flex-row justify-end">
       <div class="rotate-90 text-sm relative top-8 fadein">
         <ScrollDownText color="white" client:load />
       </div>
-    </a>
-    <div id="about">
-      <AboutSection client:load  />
     </div>
+    <div id="about">
+      <AboutSection client:load />
+    </div>
+    <footer id="contact" class="w-full bg-black">
+      <div class="px-8 md:px-16 lg:px-32 pt-12">
+        <ContactSection />
+      </div>
+      <div class="py-8 w-screen mt-8 border-t-2 border-white flex justify-around text-sm">
+        <Copyright />
+      </div>
+    </footer>
   </main>
 </Layout>
 
@@ -66,8 +77,4 @@ import AboutSection from "../components/AboutSection";
     background-size: 500%;
     background-position: 0%;
   }
-
-
-
-
 </style>
