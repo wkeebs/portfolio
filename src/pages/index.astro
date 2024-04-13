@@ -1,45 +1,57 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ScrollText from "../components/ScrollText"
 ---
 
 <Layout title="Will Keeble - Developer">
-  <main >
-    <div class="text-start pt-16 md:px-8">
-      <p class="text-lg">Hey, I'm</p>
-      <p class="text-9xl font-extrabold mb-3">
-        <span class="poppins text-gradient">Will Keeble</span>
-      </p>
-      <p class="text-xl">
-        I'm a <span class="text-green-600">developer</span> from <span
-          class="hover:bg-green-100 hover:text-black transition-all mx-0.5"
-          >Melbourne, Australia</span
-        > in my 3rd year of Computer Science at Monash University.
-      </p>
-    </div>
-  </main>
+    <main>
+        <div class="text-start pt-16 p-6 md:px-16 lg:px-32">
+            <p class="text-lg">Hey, I'm</p>
+            <p class="text-9xl font-extrabold mb-3">
+                <span class="poppins text-gradient">WILL KEEBLE</span>
+            </p>
+            <p class="text-xl">
+                A <span class="text-green-600">developer</span> from <span
+                    class="hover:bg-green-100 hover:text-black transition-all mx-0.5"
+                    >Melbourne, Australia</span
+                > in my 3rd year of <span
+                    class="hover:bg-green-100 hover:text-black transition-all mx-0.5"
+                    >Computer Science</span
+                > at <span
+                    class="hover:bg-green-100 hover:text-black transition-all mx-0.5"
+                    >Monash University</span
+                >.
+            </p>
+        </div>
+        <div class="w-screen h-screen bg-white mt-32 rounded-3xl">
+            <div class="w-full flex flex-row justify-end">
+                <ScrollText client:load/>
+            </div>
+        </div>
+    </main>Ï
 </Layout>
 
 <style>
-  main {
-    padding: 3rem;
-    width: 100%;
-    color: white;
-    font-size: 1.5em;
-    line-height: 1.6;
-  }
+    main {
+        /* padding: 3rem; */
+        width: 100%;
+        color: white;
+        font-size: 1.5em;
+        line-height: 1.6;
+    }
 
-  h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
-    margin-bottom: 1em;
-  }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 500%;
-    background-position: 0%;
-  }
+    h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+    .text-gradient {
+        background-image: var(--accent-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 500%;
+        background-position: 0%;
+    }
 </style>

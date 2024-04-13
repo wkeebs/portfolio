@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "../util/useMediaQuery";
-import ResumeBtn from "./ResumeBtn.astro";
 
 const navMotion = {
   visible: {

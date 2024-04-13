@@ -6,6 +6,7 @@ export default {
     extend: {
       colors: {
         "dark-bg": "#13151a",
+        "accent-dark": "#222222",
       },
       backgroundImage: {
         "hero-pattern":
