@@ -26,7 +26,7 @@ const Nav = (props: any) => {
   const matches = useMediaQuery("(min-width: 720px)");
 
   return (
-    <nav className="relative mx-8 flex justify-between pt-12 pb-6 items-center md:mx-16 lg:mx-32">
+    <nav className="relative mx-8 flex justify-between pt-12 pb-6 items-center md:mx-16 lg:mx-32 z-50">
       <a className="text-2xl text-white hover:bg-green-400 hover:text-accent-dark transition-all" href="\">
         {" "}
         <span className="text-green-700">{"<"}</span> WK <span className="text-green-700">{">"}</span>

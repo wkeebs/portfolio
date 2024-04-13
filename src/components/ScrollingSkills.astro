@@ -1,0 +1,68 @@
+<div class="scrolling-text text-base mt-4 text-white">
+  <ul>
+    <li>Python</li>
+    <li>Java</li>
+    <li>JavaScript</li>
+    <li>React</li>
+    <li>Tailwind</li>
+    <li>Unity</li>
+    <li>C#</li>
+    <li>TypeScript</li>
+    <li>Haskell</li>
+    <li>SQL</li>
+    <li>Git</li>
+    <li>Jira</li>
+    <li>Electron</li>
+  </ul>
+
+  <ul aria-hidden="true">
+    <li>Python</li>
+    <li>Java</li>
+    <li>JavaScript</li>
+    <li>React</li>
+    <li>Tailwind</li>
+    <li>Unity</li>
+    <li>C#</li>
+    <li>TypeScript</li>
+    <li>Haskell</li>
+    <li>SQL</li>
+    <li>Git</li>
+    <li>Jira</li>
+    <li>Electron</li>
+  </ul>
+</div>
+
+<style>
+  .scrolling-text {
+    padding-block: 8px;
+    border-block: 1px solid;
+    overflow: hidden;
+    user-select: none;
+
+    --gap: 5rem;
+    display: flex;
+    gap: var(--gap);
+  }
+
+  .scrolling-text:hover ul {
+    animation-play-state: paused;
+  }
+
+  @keyframes scroll {
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+
+  .scrolling-text ul {
+    list-style: none;
+    flex-shrink: 0;
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap);
+
+    animation: scroll 20s linear infinite;
+  }
+</style>
