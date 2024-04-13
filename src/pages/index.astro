@@ -1,42 +1,46 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ScrollDownText from "../components/ScrollDownText";
-import SocialButton from "../components/SocialButton";
+import SocialButton from "../components/SocialButton.astro";
 import ParallaxBackground from "../components/ParallaxBackground";
 import ScrollingSkills from "../components/ScrollingSkills.astro";
+import AboutSection from "../components/AboutSection";
 ---
 
 <Layout title="Will Keeble - Developer">
-  <ParallaxBackground client:load />
   <main>
     <ScrollingSkills />
     <div class="text-center pt-24 p-6 md:px-16 lg:px-32 h-[24rem]">
-      <p class="text-8xl sm:text-9xl font-extrabold mb-3">
+      <p class="text-8xl sm:text-[10rem] font-extrabold mb-3">
         <span class="poppins tracking-wider shadowed-text">WILL KEEBLE</span>
       </p>
-      <p class="mt-8 text-3xl text-gradient select-none">
+      <p class="mt-8 text-3xl text-gradient">
         DEVELOPER. COMPUTER SCIENCE STUDENT.
       </p>
       <div class="mt-12 w-full flex justify-center gap-8">
         <SocialButton
           url="https://www.linkedin.com/in/will-keeble/"
-          logo=""
+          logo="linkedin"
           text="linkedin"
           client:load
         />
         <SocialButton
           url="https://www.github.com/wkeebs/"
-          logo=""
+          logo="github"
           text="github"
           client:load
         />
       </div>
     </div>
-    <div class="w-full flex flex-row justify-end">
-      <ScrollDownText color="white" client:load />
+    <a href="#about" class="w-full flex flex-row justify-end">
+      <div class="rotate-90 text-sm relative top-8 fadein">
+        <ScrollDownText color="white" client:load />
+      </div>
+    </a>
+    <div id="about">
+      <AboutSection client:load />
     </div>
-    <div class="h-[36rem] bg-white mt-32 rounded-3xl m-4"></div>
-  </main>Ï
+  </main>
 </Layout>
 
 <style>
@@ -63,5 +67,7 @@ import ScrollingSkills from "../components/ScrollingSkills.astro";
     background-position: 0%;
   }
 
+
+
+
 </style>
-../components/ScrollDownText

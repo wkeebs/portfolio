@@ -14,10 +14,7 @@ const ScrollDownText: React.FC<ScrollTextProps> = ({ color }) => {
 
   return (
     <>
-      <motion.p
-        style={{ opacity, color: color }}
-        className="text-sm rotate-90 relative top-8"
-      >
+      <motion.p style={{ opacity, color: color }}>
         <motion.p
           transition={{
             duration: 1.5,
