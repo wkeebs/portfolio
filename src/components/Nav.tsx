@@ -25,8 +25,10 @@ const Nav = (props: any) => {
   const [toggled, setToggled] = useState(false);
   const matches = useMediaQuery("(min-width: 720px)");
 
+  const toggle = () => setToggled((prevToggle) => !prevToggle);
+
   return (
-    <nav className="relative mx-8 flex justify-between pt-12 pb-6 items-center md:mx-16 lg:mx-32 z-50">
+    <nav className="relative mx-8 flex justify-between pt-12 pb-6 items-center md:mx-16 lg:mx-32 z-50 uppercase tracking-widest">
       <a
         className="text-2xl text-white hover:bg-green-400 hover:text-accent-dark transition-all"
         href="\"
@@ -44,7 +46,10 @@ const Nav = (props: any) => {
           <a className="hover:underline-offset-2 hover:underline" href="/">
             projects
           </a>
-          <a className="hover:underline-offset-2 hover:underline" href="#contact">
+          <a
+            className="hover:underline-offset-2 hover:underline"
+            href="#contact"
+          >
             contact
           </a>
           {props.resumeBtn}
@@ -52,10 +57,7 @@ const Nav = (props: any) => {
       )}
 
       {!matches && (
-        <div
-          onClick={() => setToggled((prevToggle) => !prevToggle)}
-          className="space-y-1.5 cursor-pointer z-50"
-        >
+        <div onClick={toggle} className="space-y-1.5 cursor-pointer z-50">
           <motion.span
             animate={{ rotateZ: toggled ? 45 : 0, y: toggled ? 8 : 0 }}
             className="block h-0.5 w-8 bg-white"
@@ -78,7 +80,7 @@ const Nav = (props: any) => {
         <motion.div
           animate={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 25 }}
-          className="flex fixed bottom-0 left-0 w-full h-screen items-center justify-center text-white bg-dark-bg"
+          className="flex fixed top-0 left-0 w-full h-full items-center justify-center text-white bg-dark-bg"
         >
           <motion.div
             variants={navMotion}
@@ -89,7 +91,8 @@ const Nav = (props: any) => {
             <motion.a
               className="hover:underline-offset-2 hover:underline"
               variants={itemMotion}
-              href="/"
+              href="#about"
+              onClick={toggle}
             >
               about
             </motion.a>
@@ -97,17 +100,21 @@ const Nav = (props: any) => {
               className="hover:underline-offset-2 hover:underline"
               variants={itemMotion}
               href="/"
+              onClick={toggle}
             >
               projects
             </motion.a>
             <motion.a
               className="hover:underline-offset-2 hover:underline"
               variants={itemMotion}
-              href="/"
+              href="#contact"
+              onClick={toggle}
             >
               contact
             </motion.a>
-            <motion.div variants={itemMotion}>{props.resumeBtn}</motion.div>
+            <motion.div onClick={toggle} variants={itemMotion}>
+              {props.resumeBtn}
+            </motion.div>
           </motion.div>
         </motion.div>
       )}

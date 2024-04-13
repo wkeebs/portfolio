@@ -10,7 +10,7 @@ const ScrollDownText: React.FC<ScrollTextProps> = ({ color }) => {
   const { scrollYProgress } = useScroll();
 
   // Transform scrollYProgress to reverse the opacity
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
 
   return (
     <>

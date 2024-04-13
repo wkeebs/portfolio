@@ -18,10 +18,14 @@ const AboutSection = (props: any) => {
     setProgress(value);
   });
 
-  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 0]);
+  const opacity = useTransform(
+    scrollYProgress,
+    [-0.1, 0.4],
+    [0, 1]
+  );
 
   return (
-    <div className="bg-white mx-8 md:mx-16 lg:mx-32 my-32 rounded-2xl text-center">
+    <div className="bg-white mx-8 md:mx-16 lg:mx-32 my-32 rounded-2xl text-center border-4 border-double">
       <motion.div
         style={{ opacity: opacity }}
         ref={ref}
@@ -29,9 +33,11 @@ const AboutSection = (props: any) => {
       >
         <div className="xl:w-2/3">
           <div className="w-full flex justify-between items-center">
-            <h1 className="text-5xl mb-8 underline underline-offset-1 decoration-green-300 poppins">ABOUT ME</h1>
+            <h1 className="text-5xl mb-8 underline underline-offset-1 decoration-green-300 poppins">
+              ABOUT ME
+            </h1>
             <img
-              className="lg:w-[12rem] w-[10rem] xl:hidden block"
+              className="lg:w-[12rem] w-[7rem] xl:hidden block"
               src="src/assets/profile.jpeg"
               style={{
                 borderRadius: "50%",
@@ -49,11 +55,11 @@ const AboutSection = (props: any) => {
                 Melbourne, Australia.
               </p>
               <p>
-                I'm on a journey to become a{" "}
+                I'm on the path to become a {" "}
                 <span className="bg-green-500">
                   full-stack software engineer
                 </span>
-                , with my passion residing in web development and emerging
+                , with passion residing in web development and emerging
                 technologies.
               </p>
               <p>
@@ -62,7 +68,7 @@ const AboutSection = (props: any) => {
                 instructing for an introduction to programming unit in Python.
               </p>
               <p>
-                More so, I spend most of my time outside of my work as a{" "}
+                Moreover, I spend most of my time outside of my work as a{" "}
                 <span className="bg-green-500">
                   Software Development Intern
                 </span>{" "}
