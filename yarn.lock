@@ -592,6 +592,11 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.20.2.tgz#9c907b21e30a52db959ba4f80bb01a0cc403d5cc"
   integrity sha512-N49X4lJX27+l9jbLKSqZ6bKNjzQvHaT8IIFUy+YIqmXQdjYCToGWwOItDrfby14c78aDd5NHQl29xingXfCdLQ==
 
+"@fontsource-variable/roboto-mono@^5.0.18":
+  version "5.0.18"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/roboto-mono/-/roboto-mono-5.0.18.tgz#f9da1a1ae01e356167553412ec8d6bdb65e98cd4"
+  integrity sha512-AIqr9HYQDqiJjGcs/fHedGc0ZGfEGdixm87O9viAQ4PXfiLEelpCnE2jlviJaYcGi3UHxe9+Nn3SalcHhKFSjw==
+
 "@fontsource/apfel-grotezk@^5.0.7":
   version "5.0.7"
   resolved "https://registry.yarnpkg.com/@fontsource/apfel-grotezk/-/apfel-grotezk-5.0.7.tgz#90ef160ef4aca48ce5d318b799240229393fa3f5"

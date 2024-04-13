@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        "dark-bg": "#13151a",
+        "dark-bg": "#121612",
         "accent-dark": "#222222",
       },
       backgroundImage: {

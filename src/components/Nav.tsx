@@ -27,13 +27,13 @@ const Nav = (props: any) => {
 
   return (
     <nav className="relative mx-8 flex justify-between pt-12 pb-6 items-center md:mx-16 lg:mx-32">
-      <a className="text-2xl text-white poppins" href="\">
+      <a className="text-2xl text-white hover:bg-green-400 hover:text-accent-dark transition-all" href="\">
         {" "}
-        <span className="text-green-700">{"<"}</span> W K <span className="text-green-700">{">"}</span>
+        <span className="text-green-700">{"<"}</span> WK <span className="text-green-700">{">"}</span>
       </a>
 
       {matches && (
-        <div className="flex gap-12 text-white">
+        <div className="flex gap-12 text-white transition-all">
           <a className="hover:underline-offset-2 hover:underline" href="/">about</a>
           <a className="hover:underline-offset-2 hover:underline" href="/">projects</a>
           <a className="hover:underline-offset-2 hover:underline" href="/">contact</a>
