@@ -7,52 +7,61 @@ import ScrollingSkills from "../components/ScrollingSkills.astro";
 import AboutSection from "../components/AboutSection";
 import ContactSection from "../components/ContactSection.astro";
 import Copyright from "../components/Copyright";
-
+import ResumeBtn from "../components/ResumeBtn.astro";
+import ProjectsSection from "../components/ProjectsSection.astro";
 ---
 
-<Layout title="Will Keeble - Developer">
+<Layout title="Will Keeble's Portfolio">
   <main>
-    <ScrollingSkills />
-    <div class="text-center pt-24 p-4 md:px-16 lg:px-32 h-[24rem]">
-      <p class="text-8xl sm:text-[10rem] font-bold mb-3">
-        <span class="poppins tracking-wider shadowed-text">WILL KEEBLE</span>
-      </p>
-      <p class="mt-8 text-3xl text-gradient">
-        DEVELOPER. COMPUTER SCIENCE STUDENT.
-      </p>
-      <div class="mt-12 w-full flex justify-center gap-8">
-        <SocialButton
-          url="https://www.linkedin.com/in/will-keeble/"
-          logo="linkedin"
-          text="linkedin"
-          client:load
-        />
-        <SocialButton
-          url="https://www.github.com/wkeebs/"
-          logo="github"
-          text="github"
-          client:load
-        />
+    <div class="text-center pt-24 p-4 md:px-16 lg:px-32 h-[40rem]">
+      <div class="h-full flex flex-col justify-center items-center">
+        <div class="rotate-90 text-sm absolute right-4 bottom-12 fadein">
+          <ScrollDownText color="white" client:load />
+        </div>
+        <p class="text-8xl sm:text-[8rem] mb-3">
+          <span class="cal-sans shadowed-text uppercase">will keeble</span>
+        </p>
+        <div class="mt-12 w-full flex justify-center gap-8">
+          <SocialButton
+            url="https://www.linkedin.com/in/will-keeble/"
+            logo="linkedin"
+            text="linkedin"
+            client:load
+          />
+          <SocialButton
+            url="https://www.github.com/wkeebs/"
+            logo="github"
+            text="github"
+            client:load
+          />
+        </div>
+      </div>
+      
+      <div class="w-full flex flex-row justify-end">
       </div>
     </div>
-    <div class="w-full flex flex-row justify-end">
-      <div class="rotate-90 text-sm relative top-8 fadein">
-        <ScrollDownText color="white" client:load />
+    <div class="px-8 md:px-16 lg:px-32">
+      <div id="about">
+        <AboutSection client:load />
       </div>
+      <div id="projects">
+        <ProjectsSection />
+      </div>
+      <footer id="contact" class="w-full">
+        <div class="pt-12">
+          <ContactSection />
+          <p class="w-full text-[10px] text-end absolute right-8">
+            Crafted with Astro
+          </p>
+        </div>
+      </footer>
     </div>
-    <div id="about">
-      <AboutSection client:load />
-    </div>
-    <footer id="contact" class="w-full bg-black">
-      <div class="px-8 md:px-16 lg:px-32 pt-12">
-        <ContactSection />
-        <p class="w-full text-[10px] text-end absolute right-8"> Crafted with Astro and React </p>
-      </div>
-      <div class="py-8 w-screen mt-8 border-t-2 border-white flex justify-center gap-6 text-sm">
-        <Copyright />
-      </div>
-    </footer>
   </main>
+  <div
+    class="py-8 w-screen mt-8 border-t-2 border-white flex justify-center gap-6 text-sm"
+  >
+    <Copyright />
+  </div>
 </Layout>
 
 <style>
@@ -78,6 +87,4 @@ import Copyright from "../components/Copyright";
     background-size: 500%;
     background-position: 0%;
   }
-
-  
 </style>

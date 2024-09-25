@@ -34,8 +34,8 @@ const Nav = (props: any) => {
         href="\"
       >
         {" "}
-        <span className="text-green-700">{"<"}</span> WK{" "}
-        <span className="text-green-700">{">"}</span>
+        <span className="text-accent">{"<"}</span> WK{" "}
+        <span className="text-accent">{">"}</span>
       </a>
 
       {matches && (
@@ -43,7 +43,7 @@ const Nav = (props: any) => {
           <a className="hover:underline-offset-2 hover:underline" href="#about">
             about
           </a>
-          <a className="hover:underline-offset-2 hover:underline" href="/">
+          <a className="hover:underline-offset-2 hover:underline" href="#projects">
             projects
           </a>
           <a
@@ -99,7 +99,7 @@ const Nav = (props: any) => {
             <motion.a
               className="hover:underline-offset-2 hover:underline"
               variants={itemMotion}
-              href="/"
+              href="#projects"
               onClick={toggle}
             >
               projects

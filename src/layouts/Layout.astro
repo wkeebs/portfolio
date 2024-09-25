@@ -4,7 +4,8 @@ import "@fontsource/lato";
 import "@fontsource/apfel-grotezk";
 import "@fontsource-variable/roboto-mono";
 import ResumeBtn from "../components/ResumeBtn.astro";
-import ParallaxBackground from "../components/ParallaxBackground";
+import Particles from "../components/Particles";
+import "cal-sans";
 
 interface Props {
   title: string;
@@ -14,7 +15,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="selection:bg-green-400">
+<html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -24,7 +25,12 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <ParallaxBackground client:load />
+    <!-- <ParallaxBackground client:load /> -->
+    <Particles
+      className="absolute inset-0 -z-10 animate-fade-in"
+      quantity={100}
+      client:load
+    />
     <main class="fadein-quick">
       <Nav client:load><ResumeBtn slot="resumeBtn" /></Nav>
       <slot />
@@ -33,9 +39,9 @@ const { title } = Astro.props;
 </html>
 <style is:global>
   :root {
-    --background-dark: #121612;
+    --background-dark: #141414;
     --accent: 33, 102, 20;
-    --accent-light: 224, 204, 250;
+    --accent-light: #7ee77a;
     --accent-dark: 49, 10, 101;
     --accent-gradient: linear-gradient(
       45deg,
@@ -47,8 +53,16 @@ const { title } = Astro.props;
   }
   html {
     /* font-family: "Apfel Grotesk", system-ui, sans-serif; */
-    font-family: "Roboto Mono Variable", monospace;
+    font-family: "Cal Sans", "Roboto Mono Variable", monospace;
     scroll-behavior: smooth;
+  }
+
+  p {
+    font-family: "Poppins", system-ui, sans-serif;
+  }
+
+  .cal-sans {
+    font-family: "Cal Sans";
   }
 
   .poppins {
@@ -77,6 +91,10 @@ const { title } = Astro.props;
     animation: fadeInAnimation ease 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+  }
+
+  .highlight {
+    background-color: var(--accent-light);
   }
 
   @keyframes fadeInAnimation {

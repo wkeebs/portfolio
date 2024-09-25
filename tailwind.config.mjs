@@ -5,8 +5,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        "dark-bg": "#121612",
-        "accent-dark": "#222222",
+        "dark-bg": "#1e1e1e",
+        "accent": "#3e8a3b",
+        "accent-dark": "#325231",
+        "accent-light": "#4fed89"
       },
       backgroundImage: {
         "hero-pattern":

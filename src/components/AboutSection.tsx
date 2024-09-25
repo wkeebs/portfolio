@@ -18,22 +18,18 @@ const AboutSection = (props: any) => {
     setProgress(value);
   });
 
-  const opacity = useTransform(
-    scrollYProgress,
-    [-0.1, 0.4],
-    [0, 1]
-  );
+  const opacity = useTransform(scrollYProgress, [-0.1, 0.4], [0, 1]);
 
   return (
-    <div className="bg-white mx-8 md:mx-16 lg:mx-32 my-32 rounded-2xl text-center border-4 border-double">
+    <div className="bg-white my-32 rounded-2xl text-center border-4 border-double">
       <motion.div
         style={{ opacity: opacity }}
         ref={ref}
-        className="h-full text-accent-dark text-start py-16 md:px-24 px-12 flex md:flex-row flex-col-reverse"
+        className="h-full text-dark-bg text-start py-10 md:py-20 md:px-24 px-12 flex md:flex-row flex-col-reverse"
       >
         <div className="xl:w-2/3">
           <div className="w-full flex justify-between items-center">
-            <h1 className="text-5xl mb-8 underline underline-offset-1 decoration-green-300 poppins">
+            <h1 className="text-5xl mb-8 underline underline-offset-1 cal-sans decoration-accent">
               ABOUT ME
             </h1>
             <img
@@ -45,37 +41,41 @@ const AboutSection = (props: any) => {
             />
           </div>
           <div className="flex gap-4 items-center ">
-            <div className="text-lg flex flex-col gap-4">
+            <div className="md:text-lg flex flex-col gap-4 text-sm">
               <p>Hi! I'm Will. </p>
               <p className="">
                 I'm a{" "}
-                <span className="bg-green-500">Computer Science student</span>{" "}
+                <span className="bg-accent-light">Computer Science student</span>{" "}
                 studying at{" "}
-                <span className="bg-green-500">Monash University</span> in
+                <span className="bg-accent-light">Monash University</span> in
                 Melbourne, Australia.
               </p>
               <p>
-                I'm on the path to become a {" "}
-                <span className="bg-green-500">
-                  full-stack software engineer
-                </span>
-                , with passion residing in web development and emerging
-                technologies.
+                I grew up in{" "}
+                <span className="bg-accent-light">Ballarat, Victoria</span>, and
+                moved to Melbourne to study CS shortly after high school.
+              </p>
+              <p>
+                I'm a passionate software engineer, and I'm always learning new
+                things!
               </p>
               <p>
                 I also love teaching others - I've spent time as a{" "}
-                <span className="bg-green-500">Teaching Associate</span>,
-                instructing for an introduction to programming unit in Python.
+                <span className="bg-accent-light">Teaching Associate</span>,
+                instructing for Monash's introduction to programming unit in
+                Python.
               </p>
               <p>
-                Moreover, I spend most of my time outside of my work as a{" "}
-                <span className="bg-green-500">
-                  Software Development Intern
+                Moreover, I spend most of my time outside of my studies as the{" "}
+                <span className="bg-accent-light">
+                  {" "}
+                  Vice President of{" "}
+                  <a href="https://www.monashcoding.com/" className="underline">
+                    Monash Association of Coding (MAC)
+                  </a>
                 </span>{" "}
-                at Monash University involved in{" "}
-                <span className="bg-green-500">student clubs</span>, where I
-                seek to pass on as much knowledge as I can to students who are
-                as keen as me!
+                where I seek to pass on as much knowledge as I can to students
+                who are as keen as me!
               </p>
             </div>
           </div>

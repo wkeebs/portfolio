@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "Portfolio",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -25,9 +25,11 @@
     "@types/react-dom": "^18.2.22",
     "astro": "^4.5.9",
     "astro-icon": "^1.1.0",
+    "cal-sans": "^1.0.1",
     "framer-motion": "^11.0.20",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-particles": "^2.12.2",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.4.3",
     "usehooks-ts": "^3.0.2"
