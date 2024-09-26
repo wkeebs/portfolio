@@ -38,9 +38,9 @@ const AboutSection = () => {
         ", and moved to Melbourne to study CS shortly after high school.",
     },
     {
-      text: "I also play ",
+      text: "In my free time I play a lot of ",
       highlighted: "Futsal", 
-      afterText: " having played at a competitive level all my life; I've represented Monash, Victoria and Australia!",
+      afterText: ", having played at a competitive level all my life; I've represented Monash, Victoria and Australia!",
     },
     {
       text: "I love teaching others - I've spent time as a ",
@@ -70,7 +70,7 @@ const AboutSection = () => {
                 ABOUT ME
               </h1>
               <img
-                className="lg:w-[12rem] w-[7rem] block rounded-full border-2 border-accent-light shadow-accent-light/40 shadow-md"
+                className="xl:w-[16rem] lg:w-[12rem] w-[7rem] block rounded-full border-2 border-accent-light shadow-accent-light/40 shadow-md"
                 src="/assets/profile.jpeg"
                 alt="Profile"
                 style={{
