@@ -38,7 +38,9 @@ const AboutSection = () => {
         ", and moved to Melbourne to study CS shortly after high school.",
     },
     {
-      text: "I also play Futsal, having played at a competitive level all my life; I've represented Monash, Victoria and Australia!",
+      text: "I also play ",
+      highlighted: "Futsal", 
+      afterText: " having played at a competitive level all my life; I've represented Monash, Victoria and Australia!",
     },
     {
       text: "I love teaching others - I've spent time as a ",
@@ -59,16 +61,16 @@ const AboutSection = () => {
       <motion.div
         style={{ opacity: opacity }}
         ref={ref}
-        className="h-full text-gray-100 text-start py-10 md:py-20 md:px-24 px-12 flex md:flex-row flex-col-reverse"
+        className="h-full text-gray-100 text-start py-10 md:py-20 md:px-24 px-12 flex flex-row"
       >
         <Glow color="lightgreen">
-          <div className="xl:w-2/3 glow:text-glow">
+          <div className="glow:text-glow">
             <div className="w-full flex justify-between items-center ">
               <h1 className="text-6xl md:text-8xl mb-8 underline underline-offset-4 decoration-accent-light ">
                 ABOUT ME
               </h1>
               <img
-                className="lg:w-[12rem] w-[7rem] xl:hidden block rounded-full border-2 border-accent-light shadow-accent-light/40 shadow-md"
+                className="lg:w-[12rem] w-[7rem] block rounded-full border-2 border-accent-light shadow-accent-light/40 shadow-md"
                 src="src/assets/profile.jpeg"
                 alt="Profile"
                 style={{
@@ -77,7 +79,7 @@ const AboutSection = () => {
               />
             </div>
             <div className="flex gap-4 items-center">
-              <div className="md:text-lg flex flex-col gap-4 text-sm">
+              <div className="md:text-lg text-base flex flex-col gap-4">
                 {/* Dynamically map text */}
                 {aboutText.map((section, index) => (
                   <p key={index}>
@@ -98,13 +100,6 @@ const AboutSection = () => {
                 ))}
               </div>
             </div>
-          </div>
-          <div className="xl:w-1/3 items-center xl:flex hidden m-8">
-            <img
-              className="w-full rounded-full border-2 border-accent-light shadow-accent-light/40 shadow-lg"
-              src="src/assets/profile.jpeg"
-              alt="Profile"
-            />
           </div>
         </Glow>
       </motion.div>

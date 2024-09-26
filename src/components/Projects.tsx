@@ -12,40 +12,33 @@ const projectDetails: Project[] = [
   {
     title: "Groupzy",
     description:
-      "Competitive study app, built for StartHack 2024. Won first place.",
-    technologies: ["Next.js, Firebase, Vercel"],
-    link: "https://devpost.com/software/groupzy",
-    image: "src/assets/profile.jpeg",
+      "A competitive study group web app my team and I built for the hackathon StartHack 2024, in the Eduction Technology stream. We won first place! This was my first real hackathon experience and was fantastic to work in a productive team across the weeks of hacking. We used Next.js for the frontend (a new experience for all of us), and Google's Firebase for user authentication.",
+    technologies: ["Next.js", "React.js", "Firebase"],
+    // link: "https://devpost.com/software/groupzy",
+    link: "https://starthack-2024-bysebts-projects.vercel.app/",
+    image: "src/assets/groupzy.jpeg",
   },
   {
-    title: "Groupzy",
-    description:
-      "Competitive study app, built for StartHack 2024. Won first place.",
-    technologies: ["Next.js, Firebase, Vercel"],
-    link: "https://devpost.com/software/groupzy",
-    image: "src/assets/profile.jpeg",
+    title: "Personal Portfolio Site",
+    description: "This website! I built this to showcase my portfolio with a bit of my personality! I chose to experiment using Astro.js (a new framework for me) and some reactive islands with React and Framer motion. This was a fun project to experiment with. (click for recursion...)",
+    technologies: ["Astro.js", "React.js", "Framer Motion"],
+    // link: "https://devpost.com/software/groupzy",
+    link: "/",
+    image: "src/assets/portfolio.jpeg",
   },
   {
-    title: "Groupzy",
+    title: "FRP Tetris",
     description:
-      "Competitive study app, built for StartHack 2024. Won first place.",
-    technologies: ["Next.js, Firebase, Vercel"],
-    link: "https://devpost.com/software/groupzy",
-    image: "src/assets/profile.jpeg",
-  },
-  {
-    title: "Groupzy",
-    description:
-      "Competitive study app, built for StartHack 2024. Won first place.",
-    technologies: ["Next.js, Firebase, Vercel"],
-    link: "https://devpost.com/software/groupzy",
-    image: "src/assets/profile.jpeg",
+      "Classic Tetris, implemented with functional reactive programming principles by utilising Rx.js. This project was a part of my journey to learn functional programming - at this point I was covering observable streams, the crux of this project. The challenging part of this project was definitely the use of observables, and is the reason I'm proud to call this my first \"real\" project.",
+    technologies: ["TypeScript", "Rx.js"],
+    link: "https://main--frp-tetris.netlify.app/",
+    image: "src/assets/frp-tetris.jpeg",
   },
 ];
 
 const Projects = () => {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 mb-16">
       {projectDetails.map((proj: Project) => (
         <ProjectCard proj={proj} />
       ))}
@@ -105,6 +98,5 @@ const ProjectCard = ({ proj }: ProjectCardProps) => {
     </div>
   );
 };
-
 
 export default Projects;
