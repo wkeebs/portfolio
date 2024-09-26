@@ -6,6 +6,7 @@ import "@fontsource-variable/roboto-mono";
 import ResumeBtn from "../components/ResumeBtn.astro";
 import Particles from "../components/Particles";
 import "cal-sans";
+import ParallaxBackground from "../components/ParallaxBackground";
 
 interface Props {
   title: string;
@@ -25,13 +26,8 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <!-- <ParallaxBackground client:load /> -->
-    <Particles
-      className="absolute inset-0 -z-10 animate-fade-in"
-      quantity={100}
-      client:load
-    />
-    <main class="fadein-quick">
+      <ParallaxBackground client:load />
+      <main class="fadein-quick">
       <Nav client:load><ResumeBtn slot="resumeBtn" /></Nav>
       <slot />
     </main>

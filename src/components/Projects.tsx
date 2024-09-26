@@ -43,7 +43,7 @@ const ProjectCard = ({ proj }: ProjectCardProps) => {
         <a
           href={proj.link}
           className={`max-w-sm block rounded-lg overflow-hidden shadow-lg transform transition-transform duration-500 relative ${
-            isHovered ? "scale-100" : "scale-95"
+            isHovered ? "scale-95" : "scale-100"
           } bg-dark-bg backdrop-filter backdrop-blur-lg text-white hover:cursor-pointer`}
           target="_blank"
           rel="noopener noreferrer"
