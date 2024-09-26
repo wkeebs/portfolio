@@ -71,7 +71,7 @@ const AboutSection = () => {
               </h1>
               <img
                 className="lg:w-[12rem] w-[7rem] block rounded-full border-2 border-accent-light shadow-accent-light/40 shadow-md"
-                src="src/assets/profile.jpeg"
+                src="/assets/profile.jpeg"
                 alt="Profile"
                 style={{
                   borderRadius: "50%",

@@ -34,7 +34,7 @@ const AboutSection = (props: any) => {
             </h1>
             <img
               className="lg:w-[12rem] w-[7rem] xl:hidden block"
-              src="src/assets/profile.jpeg"
+              src="/assets/profile.jpeg"
               style={{
                 borderRadius: "50%",
               }}
@@ -83,7 +83,7 @@ const AboutSection = (props: any) => {
         <div className="xl:w-1/3 items-center xl:flex hidden m-8">
           <img
             className="w-full"
-            src="src/assets/profile.jpeg"
+            src="/assets/profile.jpeg"
             style={{
               borderRadius: "50%",
             }}
