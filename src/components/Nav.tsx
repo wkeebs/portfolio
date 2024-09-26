@@ -30,7 +30,7 @@ const Nav = (props: any) => {
   return (
     <nav className="relative mx-8 flex justify-between pt-12 pb-6 items-center md:mx-16 lg:mx-32 z-50 uppercase tracking-widest">
       <a
-        className="text-2xl text-white hover:bg-green-400 hover:text-accent-dark transition-all"
+        className="text-2xl text-white hover:bg-accent-light hover:text-accent-dark transition-all"
         href="\"
       >
         {" "}

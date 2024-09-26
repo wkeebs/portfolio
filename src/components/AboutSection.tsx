@@ -29,7 +29,7 @@ const AboutSection = (props: any) => {
       >
         <div className="xl:w-2/3">
           <div className="w-full flex justify-between items-center">
-            <h1 className="text-5xl mb-8 underline underline-offset-1 cal-sans decoration-accent">
+            <h1 className="text-6xl md:text-8xl mb-8 underline underline-offset-1 cal-sans decoration-accent-light">
               ABOUT ME
             </h1>
             <img
