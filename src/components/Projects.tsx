@@ -12,7 +12,7 @@ const projectDetails: Project[] = [
   {
     title: "Groupzy",
     description:
-      "A competitive study group web app my team and I built for the hackathon StartHack 2024, in the Eduction Technology stream. We won first place! This was my first real hackathon experience and was fantastic to work in a productive team across the weeks of hacking. We used Next.js for the frontend (a new experience for all of us), and Google's Firebase for user authentication.",
+      "A competitive study group web app my team and I built for the hackathon StartHack 2024, in the Education Technology (EdTech) stream. We won first place! This was my first real hackathon experience and was fantastic to work in a productive team across the weeks of hacking. We used Next.js for the frontend (a new experience for all of us), and Google's Firebase for user authentication.",
     technologies: ["Next.js", "React.js", "Firebase"],
     // link: "https://devpost.com/software/groupzy",
     link: "https://starthack-2024-bysebts-projects.vercel.app/",
@@ -20,7 +20,7 @@ const projectDetails: Project[] = [
   },
   {
     title: "Personal Portfolio Site",
-    description: "This website! I built this to showcase my portfolio with a bit of my personality! I chose to experiment using Astro.js (a new framework for me) and some reactive islands with React and Framer motion. This was a fun project to experiment with. (click for recursion...)",
+    description: "This website! I built this to showcase my portfolio with a bit of my personality; I chose to experiment using Astro.js (a new framework for me) and some reactive islands with React and Framer motion. This was a fun project to experiment with. (click for recursion...)",
     technologies: ["Astro.js", "React.js", "Framer Motion"],
     // link: "https://devpost.com/software/groupzy",
     link: "/",
