@@ -12,7 +12,7 @@ const projectDetails: Project[] = [
   {
     title: "Groupzy 🥇",
     description:
-      "A competitive study group web app my team and I built for the hackathon StartHack 2024, in the Education Technology (EdTech) stream. We won first place! This was my first real hackathon experience and was fantastic to work in a productive team across the weeks of hacking. We used Next.js for the frontend (a new experience for all of us), and Google's Firebase for user authentication.",
+      "A competitive study group web app my team and I built for StartHack 2024, where we participated in the Education Technology (EdTech) stream. We won first place! This was my first real hackathon experience and it was fantastic to work in a productive team across the hacking time. We used Next.js for the front end (a new experience for all of us), and Google's Firebase for user authentication.",
     technologies: ["Next.js", "React.js", "Firebase"],
     // link: "https://devpost.com/software/groupzy",
     link: "https://starthack-2024-bysebts-projects.vercel.app/",
