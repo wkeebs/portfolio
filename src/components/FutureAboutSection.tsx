@@ -39,8 +39,9 @@ const AboutSection = () => {
     },
     {
       text: "In my free time I play a lot of ",
-      highlighted: "Futsal", 
-      afterText: ", having played at a competitive level all my life; I've represented Monash, Victoria and Australia!",
+      highlighted: "Futsal",
+      afterText:
+        ", having played at a competitive level all my life; I've represented Monash, Victoria and Australia!",
     },
     {
       text: "I love teaching others - I've spent time as a ",
@@ -61,7 +62,7 @@ const AboutSection = () => {
       <motion.div
         style={{ opacity: opacity }}
         ref={ref}
-        className="h-full text-gray-100 text-start py-10 md:py-20 md:px-24 px-12 flex flex-row"
+        className="h-full text-gray-100 text-start py-10 md:py-20 md:px-24 px-8 flex flex-row"
       >
         <Glow color="lightgreen">
           <div className="glow:text-glow">
@@ -70,7 +71,7 @@ const AboutSection = () => {
                 ABOUT ME
               </h1>
               <img
-                className="xl:w-[16rem] lg:w-[12rem] w-[7rem] block rounded-full border-2 border-accent-light shadow-accent-light/40 shadow-md"
+                className="xl:w-[16rem] lg:w-[12rem] sm:w-[10rem] w-[7rem] block rounded-full border-2 border-accent-light shadow-accent-light/40 shadow-md"
                 src="/assets/profile.jpeg"
                 alt="Profile"
                 style={{

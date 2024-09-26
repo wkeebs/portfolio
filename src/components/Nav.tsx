@@ -63,7 +63,7 @@ const Nav = (props: any) => {
         )}
 
         {!matches && (
-          <div onClick={toggle} className="space-y-1.5 cursor-pointer z-50">
+          <div onClick={toggle} className={`${toggled ? "fixed top-8 right-8" : ""} space-y-1.5 cursor-pointer z-50`}>
             <motion.span
               animate={{ rotateZ: toggled ? 45 : 0, y: toggled ? 8 : 0 }}
               className="block h-0.5 w-8 bg-white"
