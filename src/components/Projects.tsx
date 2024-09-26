@@ -10,7 +10,7 @@ interface Project {
 
 const projectDetails: Project[] = [
   {
-    title: "Groupzy",
+    title: "Groupzy 🥇",
     description:
       "A competitive study group web app my team and I built for the hackathon StartHack 2024, in the Education Technology (EdTech) stream. We won first place! This was my first real hackathon experience and was fantastic to work in a productive team across the weeks of hacking. We used Next.js for the frontend (a new experience for all of us), and Google's Firebase for user authentication.",
     technologies: ["Next.js", "React.js", "Firebase"],
@@ -19,7 +19,7 @@ const projectDetails: Project[] = [
     image: "/assets/groupzy.jpeg",
   },
   {
-    title: "Personal Portfolio Site",
+    title: "Personal Portfolio Site 🚀",
     description: "This website! I built this to showcase my portfolio with a bit of my personality; I chose to experiment using Astro.js (a new framework for me) and some reactive islands with React and Framer motion. This was a fun project to experiment with. (click for recursion...)",
     technologies: ["Astro.js", "React.js", "Framer Motion"],
     // link: "https://devpost.com/software/groupzy",
@@ -27,9 +27,9 @@ const projectDetails: Project[] = [
     image: "/assets/portfolio.jpeg",
   },
   {
-    title: "FRP Tetris",
+    title: "FRP Tetris 🧩",
     description:
-      "Classic Tetris, implemented with functional reactive programming principles by utilising Rx.js. This project was a part of my journey to learn functional programming - at this point I was covering observable streams, the crux of this project. The challenging part of this project was definitely the use of observables, and is the reason I'm proud to call this my first \"real\" project.",
+      "Classic Tetris, implemented with functional reactive programming principles by utilising Rx.js. This project was a part of my journey to learn functional programming - at this point I was covering observable streams, the crux of this project. The challenging part of this project was definitely the use of these observables, and is the reason I'm proud to call this my first \"real\" project.",
     technologies: ["TypeScript", "Rx.js"],
     link: "https://main--frp-tetris.netlify.app/",
     image: "/assets/frp-tetris.jpeg",
