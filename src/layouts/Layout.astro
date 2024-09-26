@@ -25,10 +25,10 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="fadein">
       <ParallaxBackground client:load />
-      <main class="fadein-quick">
-      <Nav client:load><ResumeBtn slot="resumeBtn" /></Nav>
+      <main>
+      <Nav client:load><ResumeBtn slot="resumeBtn"/></Nav>
       <slot />
     </main>
   </body>
