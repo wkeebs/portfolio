@@ -16,7 +16,7 @@ const projectDetails: Project[] = [
     technologies: ["Next.js", "React.js", "Firebase"],
     // link: "https://devpost.com/software/groupzy",
     link: "https://starthack-2024-bysebts-projects.vercel.app/",
-    image: "src/assets/groupzy.jpeg",
+    image: "public/assets/groupzy.jpeg",
   },
   {
     title: "Personal Portfolio Site",
@@ -24,7 +24,7 @@ const projectDetails: Project[] = [
     technologies: ["Astro.js", "React.js", "Framer Motion"],
     // link: "https://devpost.com/software/groupzy",
     link: "/",
-    image: "src/assets/portfolio.jpeg",
+    image: "public/assets/portfolio.jpeg",
   },
   {
     title: "FRP Tetris",
@@ -32,7 +32,7 @@ const projectDetails: Project[] = [
       "Classic Tetris, implemented with functional reactive programming principles by utilising Rx.js. This project was a part of my journey to learn functional programming - at this point I was covering observable streams, the crux of this project. The challenging part of this project was definitely the use of observables, and is the reason I'm proud to call this my first \"real\" project.",
     technologies: ["TypeScript", "Rx.js"],
     link: "https://main--frp-tetris.netlify.app/",
-    image: "src/assets/frp-tetris.jpeg",
+    image: "public/assets/frp-tetris.jpeg",
   },
 ];
 
