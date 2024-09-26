@@ -38,28 +38,28 @@ import ProjectsSection from "../components/ProjectsSection.astro";
       <div class="w-full flex flex-row justify-end">
       </div>
     </div>
-    <div class="px-8 md:px-16 lg:px-32">
-      <div id="about">
+    <div class="">
+      <div class="mx-4 md:mx-16 lg:mx-32" id="about">
         <AboutSection client:load />
       </div>
-      <div id="projects">
+      <div class="mx-4 md:mx-16 lg:mx-32" id="projects">
         <ProjectsSection />
       </div>
       <footer id="contact" class="w-full">
-        <div class="pt-12">
+        <div class="pt-12 mx-4 md:mx-16 lg:mx-32">
           <ContactSection />
           <p class="w-full text-[10px] text-end absolute right-8">
             Crafted with Astro
           </p>
         </div>
+        <div
+          class="py-8 w-screen mt-8 border-t-2 border-white flex justify-center gap-6 text-sm"
+        >
+          <Copyright />
+        </div>
       </footer>
     </div>
   </main>
-  <div
-    class="py-8 w-screen mt-8 border-t-2 border-white flex justify-center gap-6 text-sm"
-  >
-    <Copyright />
-  </div>
 </Layout>
 
 <style>

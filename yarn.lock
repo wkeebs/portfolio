@@ -356,6 +356,11 @@
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
+"@codaworks/react-glow@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@codaworks/react-glow/-/react-glow-1.0.6.tgz#8c4bdb6242506b019069c3ea54e38a7fc30c912e"
+  integrity sha512-tlRept1grsMZCh84ZDSEbjRhibjuXeBi+AkZw9ZzdIk45MDbukI3MhH1KVlactWfYcwEQDnfnNEzcErEak3M1Q==
+
 "@emmetio/abbreviation@^2.3.3":
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/@emmetio/abbreviation/-/abbreviation-2.3.3.tgz#ed2b88fe37b972292d6026c7c540aaf887cecb6e"
@@ -3615,6 +3620,11 @@ react-dom@^18.2.0:
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
+
+react-glow@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-glow/-/react-glow-1.0.0.tgz#b45b2b24e087b576cd06eb25a9b491af63831d37"
+  integrity sha512-6/XD/Elj32amxCV2Pu5R2aevCERJQF6zxX0D8BUbNqy3yjM2XWwanQU4jIcTy91Nrklbq7ugtpxiZeYEBe2KrQ==
 
 react-is@^16.13.1:
   version "16.13.1"
