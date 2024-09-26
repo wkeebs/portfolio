@@ -1,51 +1,117 @@
 ---
+import Nav from "../components/Nav";
+import "@fontsource/lato";
+import "@fontsource/apfel-grotezk";
+import "@fontsource-variable/roboto-mono";
+import ResumeBtn from "../components/ResumeBtn.astro";
+import Particles from "../components/Particles";
+import "cal-sans";
+import ParallaxBackground from "../components/ParallaxBackground";
+
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="fadein">
+      <ParallaxBackground client:load />
+      <main>
+      <Nav client:load><ResumeBtn slot="resumeBtn"/></Nav>
+      <slot />
+    </main>
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+  :root {
+    --background-dark: #141414;
+    --accent: #3e8a3b;
+    --accent-light: #4fed89;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      var(--accent),
+      var(--accent-light) 40%,
+      white 60%
+    );
+    background: var(--background-dark);
+  }
+  html {
+    /* font-family: "Apfel Grotesk", system-ui, sans-serif; */
+    font-family: "Cal Sans", "Roboto Mono Variable", monospace;
+    scroll-behavior: smooth;
+  }
+
+  p {
+    font-family: "Poppins", system-ui, sans-serif;
+  }
+
+  .cal-sans {
+    font-family: "Cal Sans";
+  }
+
+  .poppins {
+    font-family: "Poppins", system-ui, sans-serif;
+  }
+
+  .roboto {
+    font-family: "Roboto Mono Variable", monospace;
+  }
+
+  .shadowed-text {
+    text-shadow: rgba(0, 0, 0, 0.3) 1px 3px 11px;
+  }
+
+  .hero-bg {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1086%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(18%2c 22%2c 18%2c 1)'%3e%3c/rect%3e%3crect width='72' height='72' clip-path='url(%26quot%3b%23SvgjsClipPath1087%26quot%3b)' x='855.68' y='155.81' fill='url(%26quot%3b%23SvgjsPattern1088%26quot%3b)' transform='rotate(268.9%2c 891.68%2c 191.81)'%3e%3c/rect%3e%3crect width='84.60000000000001' height='84.60000000000001' clip-path='url(%26quot%3b%23SvgjsClipPath1089%26quot%3b)' x='285.77' y='471.65' fill='url(%26quot%3b%23SvgjsPattern1090%26quot%3b)' transform='rotate(169.2%2c 328.07%2c 513.95)'%3e%3c/rect%3e%3crect width='168.96' height='168.96' clip-path='url(%26quot%3b%23SvgjsClipPath1091%26quot%3b)' x='372.03' y='331.25' fill='url(%26quot%3b%23SvgjsPattern1092%26quot%3b)' transform='rotate(327.57%2c 456.51%2c 415.73)'%3e%3c/rect%3e%3crect width='351.12' height='351.12' clip-path='url(%26quot%3b%23SvgjsClipPath1093%26quot%3b)' x='124.6' y='186.81' fill='url(%26quot%3b%23SvgjsPattern1094%26quot%3b)' transform='rotate(345.44%2c 300.16%2c 362.37)'%3e%3c/rect%3e%3cpath d='M283.05 527.69 L316.77 501.92L316.1596104556208 531.0546104556208z' stroke='rgba(44%2c 123%2c 54%2c 1)' stroke-width='1' stroke-dasharray='4%2c 4'%3e%3c/path%3e%3cpath d='M901.8 438.81L908.6 427.96 920.68 432.21 927.48 421.36 939.56 425.61 946.36 414.76 958.44 419.02M904.44 446.36L911.24 435.51 923.32 439.76 930.12 428.91 942.2 433.17 949 422.31 961.08 426.57' stroke='rgba(22%2c 31%2c 23%2c 1)' stroke-width='1' stroke-dasharray='3%2c 2'%3e%3c/path%3e%3crect width='98.80000000000001' height='98.80000000000001' clip-path='url(%26quot%3b%23SvgjsClipPath1095%26quot%3b)' x='801.89' y='217.27' fill='url(%26quot%3b%23SvgjsPattern1096%26quot%3b)' transform='rotate(319.72%2c 851.29%2c 266.67)'%3e%3c/rect%3e%3ccircle r='46.666666666666664' cx='728.59' cy='470.98' stroke='rgba(22%2c 31%2c 23%2c 1)' stroke-width='1'%3e%3c/circle%3e%3ccircle r='67.90252105923557' cx='823.29' cy='167.96' stroke='rgba(44%2c 123%2c 54%2c 1)' stroke-width='1.26' stroke-dasharray='2%2c 2'%3e%3c/circle%3e%3crect width='216' height='216' clip-path='url(%26quot%3b%23SvgjsClipPath1097%26quot%3b)' x='1029.5' y='85.2' fill='url(%26quot%3b%23SvgjsPattern1098%26quot%3b)' transform='rotate(335.65%2c 1137.5%2c 193.2)'%3e%3c/rect%3e%3ccircle r='46.666666666666664' cx='287.99' cy='548.01' stroke='rgba(22%2c 31%2c 23%2c 1)' stroke-width='2.73' stroke-dasharray='2%2c 2'%3e%3c/circle%3e%3crect width='136.6' height='136.6' clip-path='url(%26quot%3b%23SvgjsClipPath1099%26quot%3b)' x='1054.86' y='485.99' fill='url(%26quot%3b%23SvgjsPattern1100%26quot%3b)' transform='rotate(49.87%2c 1123.16%2c 554.29)'%3e%3c/rect%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1086'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cpattern x='0' y='0' width='6' height='6' patternUnits='userSpaceOnUse' id='SvgjsPattern1088'%3e%3cpath d='M3 1L3 5M1 3L5 3' stroke='rgba(22%2c 31%2c 23%2c 1)' fill='none' stroke-width='1'%3e%3c/path%3e%3c/pattern%3e%3cclipPath id='SvgjsClipPath1087'%3e%3ccircle r='18' cx='891.68' cy='191.81'%3e%3c/circle%3e%3c/clipPath%3e%3cpattern x='0' y='0' width='8.46' height='8.46' patternUnits='userSpaceOnUse' id='SvgjsPattern1090'%3e%3cpath d='M0 8.46L4.23 0L8.46 8.46' stroke='rgba(22%2c 31%2c 23%2c 1)' fill='none'%3e%3c/path%3e%3c/pattern%3e%3cclipPath id='SvgjsClipPath1089'%3e%3ccircle r='21.150000000000002' cx='328.07' cy='513.95'%3e%3c/circle%3e%3c/clipPath%3e%3cpattern x='0' y='0' width='168.96' height='10.56' patternUnits='userSpaceOnUse' id='SvgjsPattern1092'%3e%3crect width='168.96' height='5.28' x='0' y='0' fill='rgba(22%2c 31%2c 23%2c 1)'%3e%3c/rect%3e%3crect width='168.96' height='5.28' x='0' y='5.28' fill='rgba(0%2c 0%2c 0%2c 0)'%3e%3c/rect%3e%3c/pattern%3e%3cclipPath id='SvgjsClipPath1091'%3e%3ccircle r='42.24' cx='456.51' cy='415.73'%3e%3c/circle%3e%3c/clipPath%3e%3cpattern x='0' y='0' width='351.12' height='9.24' patternUnits='userSpaceOnUse' id='SvgjsPattern1094'%3e%3crect width='351.12' height='4.62' x='0' y='0' fill='rgba(22%2c 31%2c 23%2c 1)'%3e%3c/rect%3e%3crect width='351.12' height='4.62' x='0' y='4.62' fill='rgba(0%2c 0%2c 0%2c 0)'%3e%3c/rect%3e%3c/pattern%3e%3cclipPath id='SvgjsClipPath1093'%3e%3ccircle r='87.78' cx='300.16' cy='362.37'%3e%3c/circle%3e%3c/clipPath%3e%3cpattern x='0' y='0' width='9.88' height='9.88' patternUnits='userSpaceOnUse' id='SvgjsPattern1096'%3e%3cpath d='M0 9.88L4.94 0L9.88 9.88' stroke='rgba(22%2c 31%2c 23%2c 1)' fill='none'%3e%3c/path%3e%3c/pattern%3e%3cclipPath id='SvgjsClipPath1095'%3e%3ccircle r='24.700000000000003' cx='851.29' cy='266.67'%3e%3c/circle%3e%3c/clipPath%3e%3cpattern x='0' y='0' width='6' height='6' patternUnits='userSpaceOnUse' id='SvgjsPattern1098'%3e%3cpath d='M0 6L3 0L6 6' stroke='rgba(22%2c 31%2c 23%2c 1)' fill='none'%3e%3c/path%3e%3c/pattern%3e%3cclipPath id='SvgjsClipPath1097'%3e%3ccircle r='54' cx='1137.5' cy='193.2'%3e%3c/circle%3e%3c/clipPath%3e%3cpattern x='0' y='0' width='13.66' height='13.66' patternUnits='userSpaceOnUse' id='SvgjsPattern1100'%3e%3cpath d='M6.83 1L6.83 12.66M1 6.83L12.66 6.83' stroke='rgba(44%2c 123%2c 54%2c 1)' fill='none' stroke-width='5.65'%3e%3c/path%3e%3c/pattern%3e%3cclipPath id='SvgjsClipPath1099'%3e%3ccircle r='34.15' cx='1123.16' cy='554.29'%3e%3c/circle%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+  }
+
+  .fadein {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  .fadein-quick {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  .highlight {
+    background-color: var(--accent-light);
+  }
+
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+
 </style>

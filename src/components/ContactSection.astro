@@ -1,0 +1,40 @@
+---
+import ResumeBtn from "./ResumeBtn.astro";
+---
+
+<h1 class="cal-sans text-6xl md:text-8xl mb-16 uppercase">get in touch</h1>
+<a
+  href="mailto:will.a.keeble@gmail.com"
+  class="chunky-underline px-2 z-0 uppercase text-2xl sm:text-3xl"
+  >will.a.keeble@gmail.com</a
+>
+<div class="flex flex-col uppercase mt-8">
+  <a href="https://www.linkedin.com/in/will-keeble/" class="hover:underline w-fit" target="_blank">LinkedIn</a>
+  <a href="https://www.github.com/wkeebs/" class="hover:underline w-fit" target="_blank">GitHub</a>
+  <a href="/assets/WilliamKeebleCV.pdf" class="hover:underline w-fit" target="_blank">Resume&UpperRightArrow;</a>
+</div>
+
+<style>
+  .chunky-underline {
+    position: relative;
+    width: fit-content;
+    vertical-align: text-top;
+  }
+
+  .chunky-underline::after {
+    content: "";
+    width: 100%;
+    height: 0.3em;
+    opacity: 1;
+    background: var(--accent);
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: 0.2s;
+    z-index: -1;
+  }
+
+  .chunky-underline:hover::after {
+    height: 1.2em;
+  }
+</style>
