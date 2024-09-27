@@ -75,7 +75,7 @@ const WorkExperienceCard: React.FC<WorkExperienceCardProps> = ({
 
   return (
     <div
-      className={`bg-dark-bg bg-opacity-90 rounded-lg border border-accent-dark p-6 shadow-lg hover:scale-[0.98] transition-transform duration-500 cursor-pointer`}
+      className={`bg-dark-bg bg-opacity-90 rounded-lg border border-accent-dark p-6 shadow-lg transition-transform duration-400 cursor-pointer`}
       onClick={() => setIsOpen(!isOpen)}
     >
       <div className="grid md:grid-cols-[10rem_auto] gap-x-6">
@@ -109,9 +109,9 @@ const WorkExperienceCard: React.FC<WorkExperienceCardProps> = ({
               {skills.map((skill, index) => (
                 <span
                   key={index}
-                  className="inline-block bg-accent-dark text-white rounded-full px-3 py-1 text-sm font-semibold transition duration-300 ease-in-out hover:bg-accent-light"
+                  className="inline-block bg-accent-dark text-white rounded-full px-3 py-1 text-sm font-semibold transition duration-300 ease-in-out hover:bg-accent-light cursor-default"
                 >
-                  #{skill}
+                  {skill}
                 </span>
               ))}
             </div>

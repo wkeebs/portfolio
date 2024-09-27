@@ -103,7 +103,7 @@ const ProjectCard = ({ proj }: ProjectCardProps) => {
             {proj.technologies.map((tech: string, index: number) => (
               <span
                 key={index}
-                className="inline-block bg-accent-dark text-white rounded-full px-3 py-1 text-sm font-semibold transition duration-300 ease-in-out hover:bg-accent-light"
+                className="inline-block bg-accent-dark text-white rounded-full px-3 py-1 text-sm font-semibold transition duration-300 ease-in-out hover:bg-accent-light cursor-default"
               >
                 #{tech}
               </span>

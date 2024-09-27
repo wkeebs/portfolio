@@ -48,6 +48,12 @@ const Nav = (props: any) => {
             </a>
             <a
               className="hover:underline-offset-2 hover:underline"
+              href="#experience"
+            >
+              experience
+            </a>
+            <a
+              className="hover:underline-offset-2 hover:underline"
               href="#projects"
             >
               projects
@@ -101,6 +107,14 @@ const Nav = (props: any) => {
                 onClick={toggle}
               >
                 about
+              </motion.a>
+              <motion.a
+                className="hover:underline-offset-2 hover:underline"
+                variants={itemMotion}
+                href="#experience"
+                onClick={toggle}
+              >
+                experience
               </motion.a>
               <motion.a
                 className="hover:underline-offset-2 hover:underline"
