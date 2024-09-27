@@ -4,6 +4,7 @@ interface WorkExperienceCardProps {
   jobTitle: string;
   company: string;
   duration: string;
+  summaryText?: string;
   description: string[];
   skills: string[];
   logoUrl: string;
@@ -11,7 +12,7 @@ interface WorkExperienceCardProps {
 }
 
 const WorkExperience: React.FC = () => {
-  const workExperiences = [
+  const workExperiences: WorkExperienceCardProps[] = [
     {
       jobTitle: "Vice President",
       previousTitles: ["Events Director", "Events Officer"],
@@ -27,11 +28,16 @@ const WorkExperience: React.FC = () => {
       jobTitle: "Software Engineering Intern",
       company: "Monash eSolutions",
       duration: "Jan 2024 - Jul 2024",
+      summaryText: "Working in the Virtual and Augmented Reality Services (VARS) team as a part of Monash's Industry Based Learning (IBL) program.",
       description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, turpis ut consectetur tincidunt, nunc elit varius nisi, in tincidunt metus elit at turpis.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, turpis ut consectetur tincidunt, nunc elit varius nisi, in tincidunt metus elit at turpis.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, turpis ut consectetur tincidunt, nunc elit varius nisi, in tincidunt metus elit at turpis.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, turpis ut consectetur tincidunt, nunc elit varius nisi, in tincidunt metus elit at turpis.",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, turpis ut consectetur tincidunt, nunc elit varius nisi, in tincidunt metus elit at turpis.",
       ],
       skills: ["Node.js", "Express", "MongoDB", "REST API"],
-      logoUrl: "assets/monash-logo.jpg",
+      logoUrl: "assets/monashfit-logo.jpeg",
     },
     {
       jobTitle: "SEE Program - Software Engineering Track",
@@ -51,7 +57,7 @@ const WorkExperience: React.FC = () => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, turpis ut consectetur tincidunt, nunc elit varius nisi, in tincidunt metus elit at turpis.",
       ],
       skills: ["React", "Node.js", "GraphQL", "Docker"],
-      logoUrl: "assets/monashfit-logo.jpeg",
+      logoUrl: "assets/monash-logo.jpg",
     },
     {
       jobTitle: "Database Administration Intern",
@@ -76,6 +82,7 @@ const WorkExperience: React.FC = () => {
               previousTitles={experience.previousTitles}
               company={experience.company}
               duration={experience.duration}
+              summaryText={experience.summaryText}
               description={experience.description}
               skills={experience.skills}
               logoUrl={experience.logoUrl}
@@ -92,6 +99,7 @@ const WorkExperienceCard: React.FC<WorkExperienceCardProps> = ({
   previousTitles,
   company,
   duration,
+  summaryText,
   description,
   skills,
   logoUrl,
@@ -108,7 +116,7 @@ const WorkExperienceCard: React.FC<WorkExperienceCardProps> = ({
 
   return (
     <div
-      className={`bg-dark-bg bg-opacity-90 rounded-lg border border-accent-dark p-6 shadow-lg transition-transform duration-400 cursor-pointer`}
+      className={`bg-dark-bg bg-opacity-90 rounded-lg border border-accent-light p-6 shadow-lg transition-transform duration-400 cursor-pointer`}
       onClick={() => setIsOpen(!isOpen)}
     >
       <div className="grid md:grid-cols-[10rem_auto] gap-x-6">
@@ -121,13 +129,13 @@ const WorkExperienceCard: React.FC<WorkExperienceCardProps> = ({
           <div className="flex justify-between items-center">
             <div>
               <div className="mb-1 flex items-center">
-                <h3 className="text-xl font-bold text-accent-light">
+                <h3 className="text-xl font-bold text-accent-light min-w-fit">
                   {jobTitle}
                 </h3>
 
                 {/* Conditionally render previous titles if they exist */}
                 {previousTitles && previousTitles.length > 0 && (
-                  <span className="text-sm text-gray-500 flex items-center italic">
+                  <span className="text-sm text-gray-500 flex italic">
                     {/* Render the progression dots between titles */}
                     {previousTitles.map((title, index) => (
                       <span key={index} className="flex items-center">
@@ -140,7 +148,7 @@ const WorkExperienceCard: React.FC<WorkExperienceCardProps> = ({
               </div>
 
               <p className="text-2xl text-gray-400">{company}</p>
-              <div className="text-sm text-gray-500">{duration}</div>
+              <div className="text-sm text-gray-500 italic">{duration}</div>
             </div>
             <div className="text-gray-400">
               {isOpen ? <span className="rotate-180">▲</span> : <span>▼</span>}
@@ -153,9 +161,10 @@ const WorkExperienceCard: React.FC<WorkExperienceCardProps> = ({
             style={{ height }}
             className="overflow-hidden transition-all duration-500 ease-in-out"
           >
-            <ul className="list-disc list-inside space-y-2 text-gray-300 text-base mt-4 pl-5">
+            <p className="text-base mt-4 font-semibold">{summaryText}</p>
+            <ul className="list-disc list-inside space-y-1 mt-1 text-gray-300 text-base pl-5">
               {description.map((item, index) => (
-                <li key={index} className="leading-relaxed">
+                <li key={index} className="leading">
                   {item}
                 </li>
               ))}
