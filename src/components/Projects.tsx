@@ -10,6 +10,14 @@ interface Project {
 
 const projectDetails: Project[] = [
   {
+    title: "MACropad 🟨",
+    description:
+      "As one of the final events as Events Director of Monash Association of Coding (MAC), myself and a few of my colleagues organised one of the most ambitious events our club has done to date. We all had a passion for building custom keyboards, and decided to collaborate with the electrical engineering society to teach our members how to solder, by creating their own custom 16-key macropad. We liased with a local supplier to create custom MAC-themed PCBs, and sourced all of the parts for our members. We taught them how to solder and program the boards, giving them a keypad they can use for macros, or just as a number pad. This was the event that I was most proud of, and characterises what MAC is all about!",
+    technologies: ["Keyboard", "Soldering"],
+    link: "https://github.com/Dmarshmello/MACropad",
+    image: "/assets/MACropad.jpeg",
+  },
+  {
     title: "Groupzy 🥇",
     description:
       "A competitive study group web app my team and I built for StartHack 2024, where we participated in the Education Technology (EdTech) stream. We won first place! This was my first real hackathon experience and it was fantastic to work in a productive team across the hacking time. We used Next.js for the front end (a new experience for all of us), and Google's Firebase for user authentication.",
@@ -29,10 +37,18 @@ const projectDetails: Project[] = [
   {
     title: "FRP Tetris 🧩",
     description:
-      "Classic Tetris, implemented with functional reactive programming principles by utilising Rx.js. This project was a part of my journey to learn functional programming - at this point I was covering observable streams, the crux of this project. The challenging part of this project was definitely the use of these observables, and is the reason I'm proud to call this my first \"real\" project.",
+      "Classic Tetris, implemented with functional reactive programming principles by utilising Rx.js. This project was a part of my journey to learn functional programming - at this point I was covering observable streams, the crux of this project. The most challenging part of this project was definitely the use of these observables.",
     technologies: ["TypeScript", "Rx.js"],
     link: "https://main--frp-tetris.netlify.app/",
     image: "/assets/frp-tetris.jpeg",
+  },
+  {
+    title: "Rock Paper Scissors 🪨",
+    description:
+      "This project marked the start of my web development journey - and although elementary, it is a token which represents the start of my career. This was built as a part of my progression through The Odin Project, where I learned the absolute fundamentals of web development. I experimented with my new skills by spending hours creating a simple rock paper scissors game with animations, and this was my final product. Enjoy :)",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    link: "https://wkeebs.github.io/rock-paper-scissors/",
+    image: "/assets/rock-paper-scissors.jpeg",
   },
 ];
 
@@ -66,7 +82,7 @@ const ProjectCard = ({ proj }: ProjectCardProps) => {
         {/* Project Image */}
         <div className="relative md:w-1/3 w-full">
           <img
-            className="w-full h-64 md:h-full object-cover opacity-90 transition duration-500 ease-in-out rounded-none"
+            className="w-full h-64 md:h-full opacity-90 transition duration-500 ease-in-out rounded-none object-cover aspect-[3/2]"
             src={proj.image}
             alt={proj.title}
           />

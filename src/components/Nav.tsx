@@ -34,7 +34,7 @@ const Nav = (props: any) => {
           href="\"
         >
           {" "}
-          <span className="text-accent">{"<"}</span> WK{" "}
+          <span className="text-accent">{"<"}</span> keeble.tech{" "}
           <span className="text-accent">{">"}</span>
         </a>
 
