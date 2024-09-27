@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 interface WorkExperienceCardProps {
   jobTitle: string;
@@ -38,7 +38,7 @@ const WorkExperience: React.FC = () => {
 
   return (
     <section id="work-experience" className="pb-20">
-      <div className="container mx-auto">
+      <div className="w-full">
         <div className="flex flex-col gap-6">
           {workExperiences.map((experience, index) => (
             <WorkExperienceCard
@@ -64,45 +64,46 @@ const WorkExperienceCard: React.FC<WorkExperienceCardProps> = ({
   skills,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [height, setHeight] = useState("0px"); // Manage the height of the content
+  const contentRef = useRef<HTMLDivElement>(null); // Reference to the expandable content
+
+  useEffect(() => {
+    if (contentRef.current) {
+      setHeight(isOpen ? `${contentRef.current.scrollHeight}px` : "0px");
+    }
+  }, [isOpen]);
 
   return (
     <div
-      className={`bg-dark-bg bg-opacity-90 rounded-lg border border-accent-dark p-6 shadow-lg transform transition-transform duration-500 hover:scale-[0.98] ${
-        isOpen ? "max-h-full" : "max-h-48"
-      } overflow-hidden grid grid-cols-[10%_auto] p-x-8 gap-x-6 cursor-pointer`}
+      className={`bg-dark-bg bg-opacity-90 rounded-lg border border-accent-dark p-6 shadow-lg hover:scale-[0.98] transition-transform duration-500 cursor-pointer`}
       onClick={() => setIsOpen(!isOpen)}
     >
-      <img
-        src="assets/profile.jpeg" // Replace this with the actual path or logo prop
-        alt={`${company} logo`}
-        className="w-24 h-24 md:w-32 md:h-32 rounded-full border-2 border-accent-dark object-cover"
-      />
-      <div>
-        {/* Job Title and Company */}
-        <div
-          className="flex justify-between items-center"
-        >
-          <div>
-            <h3 className="text-xl font-bold text-accent-light mb-1">
-              {jobTitle}
-            </h3>
-            <p className="text-md text-gray-400">{company}</p>
-            <div className="text-sm text-gray-500">{duration}</div>
+      <div className="grid md:grid-cols-[10rem_auto] gap-x-6">
+        <img
+          src="assets/profile.jpeg"
+          alt={`${company} logo`}
+          className="w-24 h-24 md:w-32 md:h-32 rounded-full border-2 border-accent-dark object-cover hidden md:inline"
+        />
+        <div className="flex flex-col justify-between transform transition-transform duration-500">
+          <div className="flex justify-between items-center">
+            <div>
+              <h3 className="text-xl font-bold text-accent-light mb-1">
+                {jobTitle}
+              </h3>
+              <p className="text-md text-gray-400">{company}</p>
+              <div className="text-sm text-gray-500">{duration}</div>
+            </div>
+            <div className="text-gray-400">
+              {isOpen ? <span className="rotate-180">▲</span> : <span>▼</span>}
+            </div>
           </div>
 
-          {/* Icon to show collapse/expand */}
-          <div className="text-gray-400">
-            {isOpen ? (
-              <span className="transform rotate-180">▲</span> // Up arrow
-            ) : (
-              <span>▼</span> // Down arrow
-            )}
-          </div>
-        </div>
-
-        {/* Expandable Section */}
-        {isOpen && (
-          <>
+          {/* Expandable Section */}
+          <div
+            ref={contentRef}
+            style={{ height }}
+            className="overflow-hidden transition-all duration-500 ease-in-out"
+          >
             <p className="text-gray-300 text-base mt-4">{description}</p>
             <div className="flex flex-wrap gap-2 mt-4">
               {skills.map((skill, index) => (
@@ -114,11 +115,10 @@ const WorkExperienceCard: React.FC<WorkExperienceCardProps> = ({
                 </span>
               ))}
             </div>
-          </>
-        )}
+          </div>
+        </div>
       </div>
     </div>
   );
 };
-
 export default WorkExperience;
