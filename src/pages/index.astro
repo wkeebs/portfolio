@@ -9,6 +9,7 @@ import ContactSection from "../components/ContactSection.astro";
 import Copyright from "../components/Copyright";
 import ResumeBtn from "../components/ResumeBtn.astro";
 import ProjectsSection from "../components/ProjectsSection.astro";
+import ExperienceSection from "../components/ExperienceSection.astro";
 ---
 
 <Layout title="keeble.tech">
@@ -43,6 +44,9 @@ import ProjectsSection from "../components/ProjectsSection.astro";
     <div class="">
       <div class="mx-4 md:mx-16 lg:mx-32 min-h-screen flex flex-col justify-center" id="about">
         <AboutSection client:load />
+      </div>
+      <div class="mx-4 md:mx-16 lg:mx-32" id="experience">
+        <ExperienceSection />
       </div>
       <div class="mx-4 md:mx-16 lg:mx-32" id="projects">
         <ProjectsSection />
