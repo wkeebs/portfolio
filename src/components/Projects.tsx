@@ -12,7 +12,7 @@ const projectDetails: Project[] = [
   {
     title: "MACropad 🟨",
     description:
-      "As one of the final events as Events Director of Monash Association of Coding (MAC), myself and a few of my colleagues organised one of the most ambitious events our club has done to date. We all had a passion for building custom keyboards, and decided to collaborate with the electrical engineering society to teach our members how to solder, by creating their own custom 16-key macropad. We liased with a local supplier to create custom MAC-themed PCBs, and sourced all of the parts for our members. We taught them how to solder and program the boards, giving them a keypad they can use for macros, or just as a number pad. This was the event that I was most proud of, and characterises what MAC is all about!",
+      "As one of my final events as Events Director of Monash Association of Coding (MAC), myself and a few of my colleagues organised one of the most ambitious events our club has done to date. We all had a passion for building custom keyboards, and decided to collaborate with the electrical engineering society to teach our members how to solder, by creating their own custom 16-key macropad. We liased with a local supplier to create custom MAC-themed PCBs, and sourced all of the parts for our members. We taught them how to solder and program the boards, giving them a keypad they can use for macros, or just as a number pad. This was the event that I was most proud of, and characterises what MAC is all about!",
     technologies: ["Keyboard", "Soldering"],
     link: "https://github.com/Dmarshmello/MACropad",
     image: "/assets/MACropad.jpeg",
@@ -56,7 +56,7 @@ const Projects = () => {
   return (
     <div className="flex flex-col gap-8 mb-16">
       {projectDetails.map((proj: Project) => (
-        <ProjectCard proj={proj} />
+        <ProjectCard key={proj.title} proj={proj} />
       ))}
     </div>
   );

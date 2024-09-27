@@ -16,6 +16,7 @@ export default function Particles({
   ease = 50,
   refresh = false,
 }: ParticlesProps) {
+  const [isMobile, setIsMobile] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
   const context = useRef<CanvasRenderingContext2D | null>(null);
@@ -26,21 +27,33 @@ export default function Particles({
   const dpr = typeof window !== "undefined" ? window.devicePixelRatio : 1;
 
   useEffect(() => {
+    // Detect if the user is on mobile
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
     if (canvasRef.current) {
       context.current = canvasRef.current.getContext("2d");
     }
     initCanvas();
-    animate();
+
+    if (!isMobile) {
+      animate(); // Only run animation if not on mobile
+    }
+
     window.addEventListener("resize", initCanvas);
 
     return () => {
       window.removeEventListener("resize", initCanvas);
+      window.removeEventListener("resize", checkMobile);
     };
-  }, []);
+  }, [isMobile]);
 
   useEffect(() => {
-    onMouseMove();
-  }, [mousePosition.x, mousePosition.y]);
+    if (!isMobile) {
+      onMouseMove();
+    }
+  }, [mousePosition.x, mousePosition.y, isMobile]);
 
   useEffect(() => {
     initCanvas();
@@ -165,6 +178,8 @@ export default function Particles({
   };
 
   const animate = () => {
+    if (isMobile) return;
+
     clearContext();
     circles.current.forEach((circle: Circle, i: number) => {
       // Handle the alpha value
