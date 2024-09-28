@@ -23,7 +23,10 @@ const AboutSection = () => {
 
   // Text content
   const aboutText = [
-    { text: "Hi! I'm Will." },
+    { text: "Hey, I'm ",
+      highlighted: " Will",
+      afterText: "!"
+     },
     {
       text: "I'm a ",
       highlighted: "Computer Science student",
@@ -58,14 +61,14 @@ const AboutSection = () => {
   ];
 
   return (
-    <GlowCapture className="bg-white bg-opacity-10 backdrop-blur-lg backdrop-filter border border-accent-light shadow-lg rounded-2xl text-center">
+    <GlowCapture className="bg-white bg-opacity-10 backdrop-filter border border-accent-light shadow-lg rounded-2xl text-center">
       <motion.div
         style={{ opacity: opacity }}
         ref={ref}
         className="h-full text-gray-100 text-start py-10 md:py-20 md:px-24 px-8 flex flex-row"
       >
         <Glow color="lightgreen">
-          <div className="glow:text-glow">
+          <div className="text-glow">
             <div className="w-full flex justify-between items-center ">
               <h1 className="text-6xl md:text-8xl mb-8 underline underline-offset-4 decoration-accent-light ">
                 ABOUT ME

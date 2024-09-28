@@ -12,7 +12,7 @@ const projectDetails: Project[] = [
   {
     title: "MACropad 🟨",
     description:
-      "As one of the final events as Events Director of Monash Association of Coding (MAC), myself and a few of my colleagues organised one of the most ambitious events our club has done to date. We all had a passion for building custom keyboards, and decided to collaborate with the electrical engineering society to teach our members how to solder, by creating their own custom 16-key macropad. We liased with a local supplier to create custom MAC-themed PCBs, and sourced all of the parts for our members. We taught them how to solder and program the boards, giving them a keypad they can use for macros, or just as a number pad. This was the event that I was most proud of, and characterises what MAC is all about!",
+      "As one of my final events as Events Director of Monash Association of Coding (MAC), myself and a few of my colleagues organised one of the most ambitious events our club has done to date. We all had a passion for building custom keyboards, and decided to collaborate with the electrical engineering society to teach our members how to solder, by creating their own custom 16-key macropad. We liased with a local supplier to create custom MAC-themed PCBs, and sourced all of the parts for our members. We taught them how to solder and program the boards, giving them a keypad they can use for macros, or just as a number pad. This was the event that I was most proud of, and characterises what MAC is all about!",
     technologies: ["Keyboard", "Soldering"],
     link: "https://github.com/Dmarshmello/MACropad",
     image: "/assets/MACropad.jpeg",
@@ -56,7 +56,7 @@ const Projects = () => {
   return (
     <div className="flex flex-col gap-8 mb-16">
       {projectDetails.map((proj: Project) => (
-        <ProjectCard proj={proj} />
+        <ProjectCard key={proj.title} proj={proj} />
       ))}
     </div>
   );
@@ -67,8 +67,6 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ proj }: ProjectCardProps) => {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
     <div className="w-full flex flex-col md:flex-row bg-dark-bg rounded-xl overflow-hidden shadow-2xl transform transition-transform duration-500 border border-accent-light hover:cursor-pointer hover:scale-[0.98]">
       <a
@@ -76,8 +74,6 @@ const ProjectCard = ({ proj }: ProjectCardProps) => {
         className="w-full flex flex-col md:flex-row"
         target="_blank"
         rel="noopener noreferrer"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
       >
         {/* Project Image */}
         <div className="relative md:w-1/3 w-full">
@@ -103,7 +99,7 @@ const ProjectCard = ({ proj }: ProjectCardProps) => {
             {proj.technologies.map((tech: string, index: number) => (
               <span
                 key={index}
-                className="inline-block bg-accent-dark text-white rounded-full px-3 py-1 text-sm font-semibold transition duration-300 ease-in-out hover:bg-accent-light"
+                className="inline-block bg-accent-dark text-white rounded-full px-3 py-1 text-sm font-semibold transition duration-300 ease-in-out hover:bg-accent-light cursor-default"
               >
                 #{tech}
               </span>
