@@ -67,8 +67,6 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ proj }: ProjectCardProps) => {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
     <div className="w-full flex flex-col md:flex-row bg-dark-bg rounded-xl overflow-hidden shadow-2xl transform transition-transform duration-500 border border-accent-light hover:cursor-pointer hover:scale-[0.98]">
       <a
@@ -76,8 +74,6 @@ const ProjectCard = ({ proj }: ProjectCardProps) => {
         className="w-full flex flex-col md:flex-row"
         target="_blank"
         rel="noopener noreferrer"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
       >
         {/* Project Image */}
         <div className="relative md:w-1/3 w-full">

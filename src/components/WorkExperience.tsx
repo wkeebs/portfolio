@@ -18,55 +18,78 @@ const WorkExperience: React.FC = () => {
       previousTitles: ["Events Director", "Events Officer"],
       company: "Monash Association of Coding (MAC)",
       duration: "Jan 2024 - Present",
+      summaryText: "Building the biggest coding club in Australia.",
       description: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, turpis ut consectetur tincidunt, nunc elit varius nisi, in tincidunt metus elit at turpis.",
+        "At MAC it is our vision to provide students with the resources to succeed in the tech industry, and to foster a community of like-minded individuals who are passionate about technology.",
+        "In my role of Vice President, I am responsible for overseeing the operations of the club, helping manage a team of executive directors to ensure that all moving parts of the club are running smoothly.",
+        "I am also responsible for the strategic direction of the club, and work closely with the President to ensure that the club is meeting its goals; shaping the vision for the future of MAC.",
+        "In my role as Events Director, I was in charge of organising and overseeing the operations of all events run by MAC. This included managing a team of Events Officers and ensuring that all events were run smoothly and professionally.",
+        "As Events Director, I was directly responsible for the success of 30+ technical, non-technical and social events. My highlights include organising our first End of Exams (EOX) party, which attracted over 200 students, and our keyboard (MACropad) building workshop, which was a huge logistical and technical challenge, but was a huge success.",
       ],
-      skills: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      skills: ["Leadership", "Management", "Event Planning"],
       logoUrl: "assets/MAC-logo.png",
     },
     {
       jobTitle: "Software Engineering Intern",
       company: "Monash eSolutions",
       duration: "Jan 2024 - Jul 2024",
-      summaryText: "Working in the Virtual and Augmented Reality Services (VARS) team as a part of Monash's Industry Based Learning (IBL) program.",
+      summaryText:
+        "Working in the Virtual and Augmented Reality Services (VARS) team as a part of Monash's Industry Based Learning (IBL) program.",
       description: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, turpis ut consectetur tincidunt, nunc elit varius nisi, in tincidunt metus elit at turpis.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, turpis ut consectetur tincidunt, nunc elit varius nisi, in tincidunt metus elit at turpis.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, turpis ut consectetur tincidunt, nunc elit varius nisi, in tincidunt metus elit at turpis.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, turpis ut consectetur tincidunt, nunc elit varius nisi, in tincidunt metus elit at turpis.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, turpis ut consectetur tincidunt, nunc elit varius nisi, in tincidunt metus elit at turpis.",
+        "During my 23-week IBL placement at eSolutions, I was responsible for the development of a desktop application that aided in the rehabilitation of substance abuse disorder patients.",
+        "I developed strong technical skills in desktop application development, including TypeScript, React, and Electron. I also developed strong communication and teamwork skills, working closely with our client to deliver a high-quality product.",
+        "Additionally, I was responsible for the management of our team's agile workflow, ensuring that we were able to deliver a high-quality product on time and within scope.",
+        "I helped develop our documentation and strategy surrounding our agile foundations, by observing and learning from other teams' agile practices within eSolutions.",
+        "Throughout my placement, I also maintained documentation surrounding my time at eSolutions, including daily logs, a weekly reflection, and a final report and presentation for the IBL program team.",
       ],
-      skills: ["Node.js", "Express", "MongoDB", "REST API"],
+      skills: ["TypeScript", "React", "Electron", "Agile Methodologies"],
       logoUrl: "assets/monashfit-logo.jpeg",
     },
     {
       jobTitle: "SEE Program - Software Engineering Track",
       company: "Jane Street",
       duration: "Jul 2024",
+      summaryText:
+        "One of 25 Asia-Pacific (APAC) students selected to participate in Jane Street's SEE Program in their Hong Kong office during Winter of 2024.",
       description: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, turpis ut consectetur tincidunt, nunc elit varius nisi, in tincidunt metus elit at turpis.",
+        "Learned about the inner workings of how quantitative trading firms operate, and how they use technology to make decisions in the market.",
+        "Developed a strong understanding of the role of a market maker in the economy, through comprehensive workshops from experienced traders.",
+        "Put my new skills to test in a trading competition, where I was able to apply my knowledge of trading systems to make decisions in a simulated trading environment, in competition against other top students from across APAC.",
+        "Had the opportunity to explore a new city and culture, and meet other like-minded students from across the region.",
       ],
-      skills: ["React", "Node.js", "GraphQL", "Docker"],
+      skills: ["Trading", "Quantitative Finance"],
       logoUrl: "assets/janestreet-logo.png",
     },
     {
       jobTitle: "Teaching Associate",
       company: "Monash University - Faculty of Information Technology",
-      duration: "Feb 2023 - Jan 2024",
+      duration: "Feb 2023 - Dec 2023",
+      summaryText:
+        "Instructing for FIT1045 - Introduction to Programming in Python.",
       description: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, turpis ut consectetur tincidunt, nunc elit varius nisi, in tincidunt metus elit at turpis.",
+        "Acted as a mentor to students, providing guidance on how to succeed in the unit and in their studies more broadly. This was my favourite part of the role, as I was able to relate to the students and provide them with advice that I wish I had received when I was in their position, especially as I was a second-year student at the time.",
+        "Delivered content for weekly applied sessions, including live coding demonstrations and interactive activities to help students develop their programming skills.",
+        "Acted as a assistant during weekly workshop sessions, helping students debug their code and understand the course material.",
+        "Held weekly consultation hours, where students could come to me for help with their assignments and general issues with the content.",
+        "Held assignment interviews, where I interviewed students about their code to ensure they understood the content, and that their submissions upheld academic integrity.",
+        "Marked student assignments, providing detailed feedback to students to help them improve their skills for the future.",
       ],
-      skills: ["React", "Node.js", "GraphQL", "Docker"],
+      skills: ["Python", "Teaching", "Interviewing", "Marking"],
       logoUrl: "assets/monash-logo.jpg",
     },
     {
       jobTitle: "Database Administration Intern",
       company: "Mannix College",
       duration: "Sep 2022 - Mar 2023",
+      summaryText:
+        "Working in the IT department to manage the college's database systems.",
       description: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, turpis ut consectetur tincidunt, nunc elit varius nisi, in tincidunt metus elit at turpis.",
+        "Upheld the integrity of the college's Customer Relationship Management (CRM) database systems, ensuring that all data was accurate and up-to-date, without duplicate entries.",
+        "Developed strong skills in Microsoft Excel, using it to manage and manipulate large datasets.",
+        "Worked closely with the college's management team to ensure that the database systems were meeting their needs, and that they were able to access the data they required.",
+        "Helped organise events for Old Collegians, including the annual Gryphon Gala, where I was responsible for managing the guest list and ensuring that all attendees were accounted for.",
       ],
-      skills: ["React", "Node.js", "GraphQL", "Docker"],
+      skills: ["Microsoft Excel", "Customer Relationship Management (CRM)"],
       logoUrl: "assets/mannix-logo.png",
     },
   ];
@@ -116,7 +139,7 @@ const WorkExperienceCard: React.FC<WorkExperienceCardProps> = ({
 
   return (
     <div
-      className={`bg-dark-bg bg-opacity-90 rounded-lg border border-accent-light p-6 shadow-lg transition-transform duration-400 cursor-pointer`}
+      className={`bg-dark-bg bg-opacity-90 rounded-xl border border-accent-light p-6 shadow-lg transition-transform duration-400 cursor-pointer`}
       onClick={() => setIsOpen(!isOpen)}
     >
       <div className="grid md:grid-cols-[10rem_auto] gap-x-6">
@@ -129,7 +152,7 @@ const WorkExperienceCard: React.FC<WorkExperienceCardProps> = ({
           <div className="flex justify-between items-center">
             <div>
               <div className="mb-1 flex items-center">
-                <h3 className="text-xl font-bold text-accent-light min-w-fit">
+                <h3 className="text-xl font-bold text-accent-light min-w-fit mr-6 md:mr-2">
                   {jobTitle}
                 </h3>
 
@@ -148,12 +171,16 @@ const WorkExperienceCard: React.FC<WorkExperienceCardProps> = ({
               </div>
 
               <p className="text-2xl text-gray-400">{company}</p>
-              <div className="text-sm text-gray-500 italic">{duration}</div>
+              <div className="text-sm text-gray-500 italic mb-6">
+                {duration}
+              </div>
             </div>
             <div className="text-gray-400">
               {isOpen ? <span className="rotate-180">▲</span> : <span>▼</span>}
             </div>
           </div>
+
+          <p className="text-base  font-semibold">{summaryText}</p>
 
           {/* Expandable Section */}
           <div
@@ -161,8 +188,7 @@ const WorkExperienceCard: React.FC<WorkExperienceCardProps> = ({
             style={{ height }}
             className="overflow-hidden transition-all duration-500 ease-in-out"
           >
-            <p className="text-base mt-4 font-semibold">{summaryText}</p>
-            <ul className="list-disc list-inside space-y-1 mt-1 text-gray-300 text-base pl-5">
+            <ul className="list-disc space-y-1 mt-1 text-gray-300 text-base pl-5">
               {description.map((item, index) => (
                 <li key={index} className="leading">
                   {item}

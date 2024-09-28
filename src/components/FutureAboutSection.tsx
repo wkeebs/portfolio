@@ -61,7 +61,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <GlowCapture className="bg-white bg-opacity-10 backdrop-blur-lg backdrop-filter border border-accent-light shadow-lg rounded-2xl text-center">
+    <GlowCapture className="bg-white bg-opacity-10 backdrop-filter border border-accent-light shadow-lg rounded-2xl text-center">
       <motion.div
         style={{ opacity: opacity }}
         ref={ref}
