@@ -146,7 +146,7 @@ const WorkExperienceCard: React.FC<WorkExperienceCardProps> = ({
         <img
           src={logoUrl}
           alt={`${company} logo`}
-          className="w-24 h-24 md:w-32 md:h-32 rounded-full border-2 border-accent-dark object-cover hidden md:inline"
+          className="w-24 h-24 md:w-32 md:h-32 rounded-full border-2 border-accent-dark object-cover hidden md:inline hover:cursor-default"
         />
         <div className="flex flex-col justify-between transform transition-transform duration-500">
           <div className="flex justify-between items-center">

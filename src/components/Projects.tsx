@@ -32,7 +32,7 @@ const projectDetails: Project[] = [
     technologies: ["Astro.js", "React.js", "Framer Motion"],
     // link: "https://devpost.com/software/groupzy",
     link: "/",
-    image: "/assets/portfolio.jpeg",
+    image: "/assets/portfolio.png",
   },
   {
     title: "FRP Tetris 🧩",
@@ -45,7 +45,7 @@ const projectDetails: Project[] = [
   {
     title: "Rock Paper Scissors 🪨",
     description:
-      "This project marked the start of my web development journey - and although elementary, it is a token which represents the start of my career. This was built as a part of my progression through The Odin Project, where I learned the absolute fundamentals of web development. I experimented with my new skills by spending hours creating a simple rock paper scissors game with animations, and this was my final product. Enjoy :)",
+      "This project marked the start of my web development journey - and although elementary, it is a token which represents the start of my career. This was built as a part of my progression through The Odin Project, where I learned the absolute fundamentals of web development. I experimented with my new skills by spending hours creating a simple rock paper scissors game with animations, and this was my final product.",
     technologies: ["HTML", "CSS", "JavaScript"],
     link: "https://wkeebs.github.io/rock-paper-scissors/",
     image: "/assets/rock-paper-scissors.jpeg",
