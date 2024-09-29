@@ -18,7 +18,7 @@ const WorkExperience: React.FC = () => {
       previousTitles: ["Events Director", "Events Officer"],
       company: "Monash Association of Coding (MAC)",
       duration: "Jan 2024 - Present",
-      summaryText: "Building the biggest coding club in Australia.",
+      summaryText: "Building the biggest coding club in Australia",
       description: [
         "At MAC it is our vision to provide students with the resources to succeed in the tech industry, and to foster a community of like-minded individuals who are passionate about technology.",
         "In my role of Vice President, I am responsible for overseeing the operations of the club, helping manage a team of executive directors to ensure that all moving parts of the club are running smoothly.",
@@ -34,7 +34,7 @@ const WorkExperience: React.FC = () => {
       company: "Monash eSolutions",
       duration: "Jan 2024 - Jul 2024",
       summaryText:
-        "Working in the Virtual and Augmented Reality Services (VARS) team as a part of Monash's Industry Based Learning (IBL) program.",
+        "Working in the Virtual and Augmented Reality Services (VARS) team as a part of Monash's Industry Based Learning (IBL) program",
       description: [
         "During my 23-week IBL placement at eSolutions, I was responsible for the development of a desktop application that aided in the rehabilitation of substance abuse disorder patients.",
         "I developed strong technical skills in desktop application development, including TypeScript, React, and Electron. I also developed strong communication and teamwork skills, working closely with our client to deliver a high-quality product.",
@@ -49,12 +49,12 @@ const WorkExperience: React.FC = () => {
       jobTitle: "SEE Program - Software Engineering Track",
       company: "Jane Street",
       duration: "Jul 2024",
-      summaryText:
-        "One of 25 Asia-Pacific (APAC) students selected to participate in Jane Street's SEE Program in their Hong Kong office during Winter of 2024.",
+      summaryText: 
+        "One of 25 students selected to participate in Jane Street's SEE Program in their Hong Kong office during Winter of 2024",
       description: [
         "Learned about the inner workings of how quantitative trading firms operate, and how they use technology to make decisions in the market.",
         "Developed a strong understanding of the role of a market maker in the economy, through comprehensive workshops from experienced traders.",
-        "Put my new skills to test in a trading competition, where I was able to apply my knowledge of trading systems to make decisions in a simulated trading environment, in competition against other top students from across APAC.",
+        "Put my new skills to test in a trading competition, where I was able to apply my knowledge of trading systems to make decisions in a simulated trading environment, in competition against other top students from across Asia-Pacific.",
         "Had the opportunity to explore a new city and culture, and meet other like-minded students from across the region.",
       ],
       skills: ["Trading", "Quantitative Finance"],
@@ -65,7 +65,7 @@ const WorkExperience: React.FC = () => {
       company: "Monash University - Faculty of Information Technology",
       duration: "Feb 2023 - Dec 2023",
       summaryText:
-        "Instructing for FIT1045 - Introduction to Programming in Python.",
+        "Instructing for FIT1045 - Introduction to Programming in Python",
       description: [
         "Acted as a mentor to students, providing guidance on how to succeed in the unit and in their studies more broadly. This was my favourite part of the role, as I was able to relate to the students and provide them with advice that I wish I had received when I was in their position, especially as I was a second-year student at the time.",
         "Delivered content for weekly applied sessions, including live coding demonstrations and interactive activities to help students develop their programming skills.",
@@ -82,7 +82,7 @@ const WorkExperience: React.FC = () => {
       company: "Mannix College",
       duration: "Sep 2022 - Mar 2023",
       summaryText:
-        "Working in the IT department to manage the college's database systems.",
+        "Managing the college's database and CRM systems",
       description: [
         "Upheld the integrity of the college's Customer Relationship Management (CRM) database systems, ensuring that all data was accurate and up-to-date, without duplicate entries.",
         "Developed strong skills in Microsoft Excel, using it to manage and manipulate large datasets.",
