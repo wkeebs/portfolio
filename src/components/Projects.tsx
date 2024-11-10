@@ -10,6 +10,13 @@ interface Project {
 
 const projectDetails: Project[] = [
   {
+    title: "Static Site Generator 📄",
+    description: "As a quick brain exercise (and to brush up on my Python), I decided to create a static site generator. The generator converts markdown files to HTML, maintaining directory structure for simple document linking to preserve article structure. This project is useful for quickly writing publications, which is intended for my role as Vice President of MAC; I will be using the generator for creating articles to supplement our educational workshops.",
+    technologies: ["Python", "Markdown"],
+    link: "https://github.com/wkeebs/ssgen",
+    image: "/assets/ssgen.png"
+  },
+  {
     title: "MACropad 🟨",
     description:
       "As one of my final events as Events Director of Monash Association of Coding (MAC), myself and a few of my colleagues organised one of the most ambitious events our club has done to date. We all had a passion for building custom keyboards, and decided to collaborate with the electrical engineering society to teach our members how to solder, by creating their own custom 16-key macropad. We liased with a local supplier to create custom MAC-themed PCBs, and sourced all of the parts for our members. We taught them how to solder and program the boards, giving them a keypad they can use for macros, or just as a number pad. This was the event that I was most proud of, and characterises what MAC is all about!",
