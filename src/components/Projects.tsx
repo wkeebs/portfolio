@@ -11,7 +11,7 @@ interface Project {
 const projectDetails: Project[] = [
   {
     title: "Static Site Generator 📄",
-    description: "As a quick brain exercise (and to brush up on my Python), I decided to create a static site generator. The generator converts markdown files to HTML, maintaining directory structure for simple document linking to preserve article structure. This project is useful for quickly writing publications, which is intended for my role as Vice President of MAC; I will be using the generator for creating articles to supplement our educational workshops.",
+    description: "As a quick brain exercise (and to brush up on my Python), I decided to create a static site generator. The generator converts markdown files to HTML, maintaining directory structure for simple document linking to preserve article structure. This project is useful for quickly writing publications for a simple blog webpage.",
     technologies: ["Python", "Markdown"],
     link: "https://github.com/wkeebs/ssgen",
     image: "/assets/ssgen.png"
